@@ -2,22 +2,27 @@ type: object
 properties:
   auto_test_suite_external_key:
     type: string
-    description: テストスイート名
+    description: 自動テストツール・システム側にて、複数のテストケースがまとめられたテスト実行単位に付与している一意のIDや名前
   auto_test_cycle_name:
     type: string
-    description: テストサイクル名
-  test_results[][auto_test_case_external_key]:
-    type: string
-    description: テストケース名
-  test_results[][result]:
-    type: string
-    description: テスト結果
-  test_results[][execution_time_taken]:
-    type: integer
-    description: テスト実行時間
-  test_results[][info_url]:
-    type: string
-    description: 当該テスト結果に関する詳細情報が記載されたWebページのURL
-  test_results[][remark]:
-    type: string
-    description: 備考
+    description: レポート表示時に、当該テスト実行回に付与する名前。定期実行の場合は、タイムスタンプなどの指定を推奨
+  auto_test_results:
+    type: array
+    items:
+      type: object
+      properties: 
+        auto_test_case_external_key:
+          type: string
+          description: 自動テストツール・システム側にて、pass/failが決まる1件ごとのテストケース単位に付与している一意のIDや名前
+        result:
+          type: string
+          description: テスト結果
+        execution_time_taken:
+          type: integer
+          description: テスト実行時間
+        info_url:
+          type: string
+          description: 当該テスト結果に関する詳細情報が記載されたWebページのURL
+        remark:
+          type: string
+          description: 備考
