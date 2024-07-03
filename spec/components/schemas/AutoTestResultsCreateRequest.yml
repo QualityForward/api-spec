@@ -26,3 +26,9 @@ properties:
         remark:
           type: string
           description: 備考
+      required: 
+        - auto_test_case_external_key
+        - result
+required:
+  - auto_test_suite_external_key
+  - auto_test_cycle_name
