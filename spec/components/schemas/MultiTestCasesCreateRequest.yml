@@ -1,87 +1,92 @@
 type: object
 properties:
-  test_cases[][no]:
-    type: integer
-    description: テストケース識別ID
-  test_case[][priority]:
-    type: integer
-    description: |
-      テストケースの優先度<br>
-      例）A=1 ~ J=10
-  test_cases[][category1]:
-    type: string
-    description: テスト定義項目1の内容
-  test_cases[][category2]:
-    type: string
-    description: テスト定義項目2の内容
-  test_cases[][category3]:
-    type: string
-    description: テスト定義項目3の内容
-  test_cases[][category4]:
-    type: string
-    description: テスト定義項目4の内容
-  test_cases[][category5]:
-    type: string
-    description: テスト定義項目5の内容
-  test_cases[][category6]:
-    type: string
-    description: テスト定義項目6の内容
-  test_cases[][category7]:
-    type: string
-    description: テスト定義項目7の内容
-  test_cases[][category8]:
-    type: string
-    description: テスト定義項目8の内容
-  test_cases[][category9]:
-    type: string
-    description: テスト定義項目9の内容
-  test_cases[][category10]:
-    type: string
-    description: テスト定義項目10の内容
-  test_cases[][category11]:
-    type: string
-    description: テスト定義項目11の内容
-  test_cases[][category12]:
-    type: string
-    description: テスト定義項目12の内容
-  test_cases[][category13]:
-    type: string
-    description: テスト定義項目13の内容
-  test_cases[][category14]:
-    type: string
-    description: テスト定義項目14の内容
-  test_cases[][category15]:
-    type: string
-    description: テスト定義項目15の内容
-  test_cases[][category16]:
-    type: string
-    description: テスト定義項目16の内容
-  test_cases[][category17]:
-    type: string
-    description: テスト定義項目17の内容
-  test_cases[][category18]:
-    type: string
-    description: テスト定義項目18の内容
-  test_cases[][category19]:
-    type: string
-    description: テスト定義項目19の内容
-  test_cases[][category20]:
-    type: string
-    description: テスト定義項目20の内容
-  test_cases[][category21]:
-    type: string
-    description: テスト定義項目21の内容
-  test_cases[][category22]:
-    type: string
-    description: テスト定義項目22の内容
-  test_cases[][category23]:
-    type: string
-    description: テスト定義項目23の内容
-  test_cases[][category24]:
-    type: string
-    description: テスト定義項目24の内容
-  test_cases[][category25]:
-    type: string
-    description: テスト定義項目25の内容
-required:
-  - test_cases[][no]
+  test_cases:
+    type: array
+    items:
+      type: object
+      properties:
+        no:
+          type: integer
+          description: テストケース識別ID
+        priority:
+          type: integer
+          description: |
+            テストケースの優先度<br>
+            例）A=1 ~ J=10
+        category1:
+          type: string
+          description: テスト定義項目1の内容
+        category2:
+          type: string
+          description: テスト定義項目2の内容
+        category3:
+          type: string
+          description: テスト定義項目3の内容
+        category4:
+          type: string
+          description: テスト定義項目4の内容
+        category5:
+          type: string
+          description: テスト定義項目5の内容
+        category6:
+          type: string
+          description: テスト定義項目6の内容
+        category7:
+          type: string
+          description: テスト定義項目7の内容
+        category8:
+          type: string
+          description: テスト定義項目8の内容
+        category9:
+          type: string
+          description: テスト定義項目9の内容
+        category10:
+          type: string
+          description: テスト定義項目10の内容
+        category11:
+          type: string
+          description: テスト定義項目11の内容
+        category12:
+          type: string
+          description: テスト定義項目12の内容
+        category13:
+          type: string
+          description: テスト定義項目13の内容
+        category14:
+          type: string
+          description: テスト定義項目14の内容
+        category15:
+          type: string
+          description: テスト定義項目15の内容
+        category16:
+          type: string
+          description: テスト定義項目16の内容
+        category17:
+          type: string
+          description: テスト定義項目17の内容
+        category18:
+          type: string
+          description: テスト定義項目18の内容
+        category19:
+          type: string
+          description: テスト定義項目19の内容
+        category20:
+          type: string
+          description: テスト定義項目20の内容
+        category21:
+          type: string
+          description: テスト定義項目21の内容
+        category22:
+          type: string
+          description: テスト定義項目22の内容
+        category23:
+          type: string
+          description: テスト定義項目23の内容
+        category24:
+          type: string
+          description: テスト定義項目24の内容
+        category25:
+          type: string
+          description: テスト定義項目24の内容
+      required:
+        - no
