@@ -27,5 +27,19 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "test_cases": [{"no":1, "priority":1, "category1":"sample1"},{"no":2, "priority":2, "category1":"sample2"}]}' \
+          --data '{
+            "api_key": "[生成したAPIキー]",
+            "test_cases": [
+              {
+                "no":1,
+                "priority":1,
+                "category1":"sample1"
+              },
+              {
+                "no":2,
+                "priority":2,
+                "category1":"sample2"
+              }
+            ]
+          }' \
           "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートid]/test_suite_versions/[対象のテストスイートバージョンid]/test_cases/bulk_upsert"
