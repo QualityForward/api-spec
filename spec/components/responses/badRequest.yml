@@ -1,0 +1,4 @@
+description: BadRequest
+content:
+  application/json:
+    example: null
