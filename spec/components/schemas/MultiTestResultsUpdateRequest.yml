@@ -1,57 +1,62 @@
 type: object
 properties:
-  test_result[][result]:
-    type: integer
-    description: |
-      テスト結果<br>
-      例）
-      - PASS = 1
-      - FAIL = 2
-  test_result[][user_id]:
-    type: integer
-    description: テスト実施者のユーザID（[GET]ユーザ情報の取得 のid）
-  test_result[][executed_at]:
-    type: string
-    format: date-time
-    description: テスト実施日
-  test_result[][content1]:
-    type: string
-    description: テスト結果自由項目ラベル1の入力内容
-  test_result[][content2]:
-    type: string
-    description: テスト結果自由項目ラベル2の入力内容
-  test_result[][content3]:
-    type: string
-    description: テスト結果自由項目ラベル3の入力内容
-  test_result[][content4]:
-    type: string
-    description: テスト結果自由項目ラベル4の入力内容
-  test_result[][content5]:
-    type: string
-    description: テスト結果自由項目ラベル5の入力内容
-  test_result[][content6]:
-    type: string
-    description: テスト結果自由項目ラベル6の入力内容
-  test_result[][content7]:
-    type: string
-    description: テスト結果自由項目ラベル7の入力内容
-  test_result[][content8]:
-    type: string
-    description: テスト結果自由項目ラベル8の入力内容
-  test_result[][content9]:
-    type: string
-    description: テスト結果自由項目ラベル9の入力内容
-  test_result[][content10]:
-    type: string
-    description: テスト結果自由項目ラベル10の入力内容
-  test_result[][result_supplement]:
-    type: integer
-    description: テスト結果補足の項目番号
-  test_result[][test_case_no]:
-    type: integer
-    description: テストケースの識別ID
-required:
-  - test_result[][result]
-  - test_result[][user_id]
-  - test_result[][executed_at]
-  - test_result[][test_case_no]
+  test_results:
+    type: array
+    items: 
+      type: object
+      properties: 
+        result:
+          type: integer
+          description: |
+            テスト結果<br>
+            例）
+            - PASS = 1
+            - FAIL = 2
+        user_id:
+          type: integer
+          description: テスト実施者のユーザID（[GET]ユーザ情報の取得 のid）
+        executed_at:
+          type: string
+          format: date-time
+          description: テスト実施日
+        content1:
+          type: string
+          description: テスト結果自由項目ラベル1の入力内容
+        content2:
+          type: string
+          description: テスト結果自由項目ラベル2の入力内容
+        content3:
+          type: string
+          description: テスト結果自由項目ラベル3の入力内容
+        content4:
+          type: string
+          description: テスト結果自由項目ラベル4の入力内容
+        content5:
+          type: string
+          description: テスト結果自由項目ラベル5の入力内容
+        content6:
+          type: string
+          description: テスト結果自由項目ラベル6の入力内容
+        content7:
+          type: string
+          description: テスト結果自由項目ラベル7の入力内容
+        content8:
+          type: string
+          description: テスト結果自由項目ラベル8の入力内容
+        content9:
+          type: string
+          description: テスト結果自由項目ラベル9の入力内容
+        content10:
+          type: string
+          description: テスト結果自由項目ラベル10の入力内容
+        result_supplement:
+          type: integer
+          description: テスト結果補足の項目番号
+        test_case_no:
+          type: integer
+          description: テストケースの識別ID
+      required: 
+        - result
+        - user_id
+        - executed_at
+        - test_case_no
