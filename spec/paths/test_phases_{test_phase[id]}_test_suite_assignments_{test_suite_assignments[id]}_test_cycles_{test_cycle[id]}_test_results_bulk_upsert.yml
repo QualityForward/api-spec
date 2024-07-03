@@ -22,3 +22,27 @@ post:
       $ref: ../components/responses/NotFound.yml
     '422':
       $ref: ../components/responses/postFailMultiTestResultsResponse.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{
+            "api_key": "[生成したAPIキー]",
+            "test_results": [
+              {
+                "result":1,
+                "user_id":1111,
+                "executed_at":"2024-07-05",
+                "test_case_no":1
+              },
+              {
+                "result":2,
+                "user_id":2222,
+                "executed_at":"2024-07-05",
+                "test_case_no":2
+              }
+            ]
+          }' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]/test_results/bulk_upsert"
