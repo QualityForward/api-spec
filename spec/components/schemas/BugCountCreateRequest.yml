@@ -1,0 +1,16 @@
+type: object
+properties:
+  bug_count_snapshots:
+    type: array
+    items:
+      type: object
+      properties:
+        target_date:
+          type: string
+          format: date-time
+        open_count:
+          type: integer
+          description: OPENチケット数
+        close_count:
+          type: integer
+          description: CLOSEチケット数

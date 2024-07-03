@@ -1,0 +1,12 @@
+description: テストケース作成失敗
+content:
+  application/json:
+    examples:
+      test_case[no]がない場合:
+        value:
+          'no':
+            - を入力してください
+      test_case[no]が既に存在している場合:
+        value:
+          'no':
+            - はすでに存在します

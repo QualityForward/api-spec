@@ -1,0 +1,80 @@
+type: object
+properties:
+  test_case[priority]:
+    type: integer
+    description: テストケースの優先度 例）A＝1 ～ J＝10
+  test_case[category1]:
+    type: string
+    description: テスト定義項目1の内容
+  test_case[category2]:
+    type: string
+    description: テスト定義項目2の内容
+  test_case[category3]:
+    type: string
+    description: テスト定義項目3の内容
+  test_case[category4]:
+    type: string
+    description: テスト定義項目4の内容
+  test_case[category5]:
+    type: string
+    description: テスト定義項目5の内容
+  test_case[category6]:
+    type: string
+    description: テスト定義項目6の内容
+  test_case[category7]:
+    type: string
+    description: テスト定義項目7の内容
+  test_case[category8]:
+    type: string
+    description: テスト定義項目8の内容
+  test_case[category9]:
+    type: string
+    description: テスト定義項目9の内容
+  test_case[category10]:
+    type: string
+    description: テスト定義項目10の内容
+  test_case[category11]:
+    type: string
+    description: テスト定義項目11の内容
+  test_case[category12]:
+    type: string
+    description: テスト定義項12の内容
+  test_case[category13]:
+    type: string
+    description: テスト定義項目13の内容
+  test_case[category14]:
+    type: string
+    description: テスト定義項目14の内容
+  test_case[category15]:
+    type: string
+    description: テスト定義項目15の内容
+  test_case[category16]:
+    type: string
+    description: テスト定義項目16の内容
+  test_case[category17]:
+    type: string
+    description: テスト定義項目17の内容
+  test_case[category18]:
+    type: string
+    description: テスト定義項目18の内容
+  test_case[category19]:
+    type: string
+    description: テスト定義項目19の内容
+  test_case[category20]:
+    type: string
+    description: テスト定義項目20の内容
+  test_case[category21]:
+    type: string
+    description: テスト定義項目21の内容
+  test_case[category22]:
+    type: string
+    description: テスト定義項目22の内容
+  test_case[category23]:
+    type: string
+    description: テスト定義項目23の内容
+  test_case[category24]:
+    type: string
+    description: テスト定義項目24の内容
+  test_case[category25]:
+    type: string
+    description: テスト定義項目25の内容

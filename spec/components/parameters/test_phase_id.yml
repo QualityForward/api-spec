@@ -1,0 +1,11 @@
+name: test_phase[id]
+in: path
+description: |
+  テストフェーズID
+
+  例）テストフェーズの対象テストスイート一覧画面のURLが以下の場合、test_phase[id]=2
+
+  `https://cloud.veriserve.co.jp/projects/1/test_phases/2/test_suite_assignments/`
+required: true
+schema:
+  type: integer

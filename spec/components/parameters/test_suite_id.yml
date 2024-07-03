@@ -1,0 +1,11 @@
+name: test_suite[id]
+in: path
+description: |
+  テストスイートID
+
+  例）テストスイート設定画面のURLが以下の場合、test_suite[id]=2
+
+  `https://cloud.veriserve.co.jp/projects/1/test_suites/2/edit`
+required: true
+schema:
+  type: integer

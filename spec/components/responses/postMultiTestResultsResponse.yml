@@ -1,0 +1,82 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/MultiTestResultsUpdateResponse.yml
+    example:
+      test_results:
+        - id: 107
+          user:
+            id: 2
+            current_tenant_id: 1
+            email: user_2@example.com
+            name: user_2
+            confirmed: true
+          test_case_id: 1
+          test_case_no: 1
+          test_cycle_id: 2
+          result: block
+          result_supplement: 1
+          executed_at: '2024-02-29T13:17:54.000+09:00'
+          content1: null
+          content2: null
+          content3: null
+          content4: null
+          content5: null
+          content6: null
+          content7: null
+          content8: null
+          content9: null
+          content10: null
+          created_at: '2024-02-29T13:17:54.000+09:00'
+          updated_at: '2024-02-29T13:17:54.000+09:00'
+        - id: 108
+          user:
+            id: 2
+            current_tenant_id: 1
+            email: user_2@example.com
+            name: user_2
+            confirmed: true
+          test_case_id: 2
+          test_case_no: 2
+          test_cycle_id: 2
+          result: block
+          result_supplement: 1
+          executed_at: '2024-02-29T13:17:54.000+09:00'
+          content1: null
+          content2: null
+          content3: null
+          content4: null
+          content5: null
+          content6: null
+          content7: null
+          content8: null
+          content9: null
+          content10: null
+          created_at: '2024-02-29T13:17:54.000+09:00'
+          updated_at: '2024-02-29T13:17:54.000+09:00'
+        - id: 109
+          user:
+            id: 2
+            current_tenant_id: 1
+            email: user_2@example.com
+            name: user_2
+            confirmed: true
+          test_case_id: 3
+          test_case_no: 3
+          test_cycle_id: 2
+          result: block
+          result_supplement: 1
+          executed_at: '2024-02-29T13:17:54.000+09:00'
+          content1: null
+          content2: null
+          content3: null
+          content4: null
+          content5: null
+          content6: null
+          content7: null
+          content8: null
+          content9: null
+          content10: null
+          created_at: '2024-02-29T13:17:54.000+09:00'
+          updated_at: '2024-02-29T13:17:54.000+09:00'

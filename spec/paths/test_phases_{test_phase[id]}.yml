@@ -1,0 +1,51 @@
+patch:
+  operationId: PatchTestPhase
+  tags:
+    - TestPhase
+  summary: テストフェーズの更新
+  description: >
+    テストフェーズを更新します。
+
+
+    テストフェーズ名（test_phase[name]）,フェーズ開始日（test_phase[start_on]）,フェーズ終了日（test_phase[end_on]）を更新する場合、値のないリクエストはエラーが返ります。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/patchTestPhaseRequest.yml
+  responses:
+    '200':
+      $ref: ../components/responses/patchTestPhaseResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request PATCH \
+          --header "Content-Type: application/json" \
+          --data '{"api_key": "[生成したAPIキー]", "test_phase":{"name":"update-test-phase"}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]"
+
+delete:
+  operationId: DeleteTestPhase
+  tags:
+    - TestPhase
+  summary: テストフェーズの削除
+  description: |
+    任意のテストフェーズを削除します。<br>
+    レスポンスボディは返りません。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '204':
+      $ref: ../components/responses/NoResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request DELETE \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]?api_key=[生成したAPIキー]"

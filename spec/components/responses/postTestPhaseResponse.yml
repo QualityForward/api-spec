@@ -1,0 +1,26 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/TestPhaseCreateResponse.yml
+    example:
+      id: 54628
+      project_id: 77591
+      name: test_phase_344
+      start_on: '2020-02-26'
+      end_on: '2020-02-29'
+      redmine_issues_url: null
+      test_suite_assignments:
+        - id: 67906
+          test_phase_id: 54628
+          test_suite_version_id: 90659
+          test_suite_name: test_suite_18
+          test_suite_version_name: test_suite_version_65
+        - id: 67907
+          test_phase_id: 54628
+          test_suite_version_id: 90660
+          test_suite_name: test_suite_18
+          test_suite_version_name: test_suite_version_66
+      archived: false
+      created_at: '2020-02-27T14:28:59.174+09:00'
+      updated_at: '2020-02-27T14:28:59.174+09:00'

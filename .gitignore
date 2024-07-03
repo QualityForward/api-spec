@@ -1,0 +1,10 @@
+# VScode Settings and extensions
+.vscode
+
+# docs
+/docs/*
+!/docs/.keep
+
+# dev
+compose.yaml
+Dockerfile

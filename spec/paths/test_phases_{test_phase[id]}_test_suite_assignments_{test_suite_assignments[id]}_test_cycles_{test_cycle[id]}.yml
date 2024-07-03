@@ -1,0 +1,51 @@
+patch:
+  operationId: PatchTestCycle
+  tags:
+    - TestCycle
+  summary: テストサイクルの更新
+  description: テストサイクルの情報を更新します。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/patchTestCycleRequest.yml
+  responses:
+    '200':
+      $ref: ../components/responses/patchTestCycleResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request PATCH \
+          --header "Content-Type: application/json" \
+          --data '{"api_key":"[生成したAPIキー]", "test_cycle":{"status":3, "name":"update_test_cycle", "target_priorities":["A"]}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]"
+
+delete:
+  operationId: DeleteTestCycle
+  tags:
+    - TestCycle
+  summary: テストサイクルの削除
+  description: |
+    任意のテストサイクルを削除します。<br>
+    レスポンスボディは返りません。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '204':
+      $ref: ../components/responses/NoResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request DELETE \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]?api_key=[生成したAPIキー]"

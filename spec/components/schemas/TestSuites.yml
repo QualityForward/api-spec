@@ -1,0 +1,165 @@
+type: object
+properties:
+  test_suites:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        project_id:
+          type: integer
+        name:
+          type: string
+        label_category1:
+          type: string
+        use_category1:
+          type: boolean
+        label_category2:
+          type: string
+        use_category2:
+          type: boolean
+        label_category3:
+          type: string
+        use_category3:
+          type: boolean
+        label_category4:
+          type: string
+        use_category4:
+          type: boolean
+        label_category5:
+          type: string
+        use_category5:
+          type: boolean
+        label_category6:
+          type: string
+        use_category6:
+          type: boolean
+        label_category7:
+          type: string
+        use_category7:
+          type: boolean
+        label_category8:
+          type: string
+        use_category8:
+          type: boolean
+        label_category9:
+          type: string
+        use_category9:
+          type: boolean
+        label_category10:
+          type: string
+        use_category10:
+          type: boolean
+        label_category11:
+          type: string
+        use_category11:
+          type: boolean
+        label_category12:
+          type: string
+        use_category12:
+          type: boolean
+        label_category13:
+          type: string
+        use_category13:
+          type: boolean
+        label_category14:
+          type: string
+        use_category14:
+          type: boolean
+        label_category15:
+          type: string
+        use_category15:
+          type: boolean
+        label_category16:
+          type: string
+        use_category16:
+          type: boolean
+        label_category17:
+          type: string
+        use_category17:
+          type: boolean
+        label_category18:
+          type: string
+        use_category18:
+          type: boolean
+        label_category19:
+          type: string
+        use_category19:
+          type: boolean
+        label_category20:
+          type: string
+        use_category20:
+          type: boolean
+        label_category21:
+          type: string
+        use_category21:
+          type: boolean
+        label_category22:
+          type: string
+        use_category22:
+          type: boolean
+        label_category23:
+          type: string
+        use_category23:
+          type: boolean
+        label_category24:
+          type: string
+        use_category24:
+          type: boolean
+        label_category25:
+          type: string
+        use_category25:
+          type: boolean
+        label_content1:
+          type: string
+        use_content1:
+          type: boolean
+        label_content2:
+          type: string
+        use_content2:
+          type: boolean
+        label_content3:
+          type: string
+        use_content3:
+          type: boolean
+        label_content4:
+          type: string
+        use_content4:
+          type: boolean
+        label_content5:
+          type: string
+        use_content5:
+          type: boolean
+        label_content6:
+          type: string
+        use_content6:
+          type: boolean
+        label_content7:
+          type: string
+        use_content7:
+          type: boolean
+        label_content8:
+          type: string
+        use_content8:
+          type: boolean
+        label_content9:
+          type: string
+        use_content9:
+          type: boolean
+        label_content10:
+          type: string
+        use_content10:
+          type: boolean
+        coverage_panel_column:
+          type: integer
+        archived:
+          type: boolean
+        test_blocker_column:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time

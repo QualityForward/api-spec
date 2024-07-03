@@ -1,0 +1,6 @@
+name: test_result[test_case_no]
+in: path
+description: テストケースの識別ID
+required: true
+schema:
+  type: integer

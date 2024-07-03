@@ -1,0 +1,23 @@
+type: object
+properties:
+  auto_test_suite_external_key:
+    type: string
+    description: テストスイート名
+  auto_test_cycle_name:
+    type: string
+    description: テストサイクル名
+  test_results[][auto_test_case_external_key]:
+    type: string
+    description: テストケース名
+  test_results[][result]:
+    type: string
+    description: テスト結果
+  test_results[][execution_time_taken]:
+    type: integer
+    description: テスト実行時間
+  test_results[][info_url]:
+    type: string
+    description: 当該テスト結果に関する詳細情報が記載されたWebページのURL
+  test_results[][remark]:
+    type: string
+    description: 備考

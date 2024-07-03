@@ -1,0 +1,7 @@
+description: 必須項目の値が不正な場合
+content:
+  application/json:
+    example:
+      error_messages:
+        - 'no': 21
+          error: テスト実施者が見つかりません

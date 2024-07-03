@@ -1,0 +1,6 @@
+description: 日付が誤っている時
+content:
+  application/json:
+    example:
+      target_date: 2023-05-111
+      error: 日付を入力してください

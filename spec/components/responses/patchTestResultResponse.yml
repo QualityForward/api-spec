@@ -1,0 +1,23 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/TestResultUpdateResponse.yml
+    example:
+      id: 220205
+      user:
+        id: 87335
+        email: user_34@example.com
+        name: user_34
+        confirmed: true
+      test_case_id: 1161206
+      test_case_no: 102
+      test_cycle_id: 38987
+      result: pass
+      result_supplemet: null
+      executed_at: '2023-05-15T11:37:33.265+09:00'
+      content1: null
+      content2: null
+      content3: null
+      created_at: '2023-05-15T11:37:33.289+09:00'
+      updated_at: '2023-05-15T11:37:33.289+09:00'

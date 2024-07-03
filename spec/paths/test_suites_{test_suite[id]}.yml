@@ -1,0 +1,56 @@
+patch:
+  operationId: PatchTestSuite
+  tags:
+    - TestSuite
+  summary: テストスイートの更新
+  description: >
+    テストスイートの情報を更新します。
+
+
+    テストスイート名（”test_suite[name]”）を更新する場合、値が入力されないリクエストはエラーが返ります。
+
+
+    テスト定義項目ラベル（“test_suite[label_category]”）、テスト結果ラベル（“test_suite[label_content1]”）の上限はお申込内容に応じて異なります。
+  parameters:
+    - $ref: ../components/parameters/test_suite_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/patchTestSuiteRequest.yml
+  responses:
+    '200':
+      $ref: ../components/responses/patchTestSuiteResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+    '422':
+      $ref: ../components/responses/NoValue.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request PATCH \
+          --header "Content-Type: application/json" \
+          --data '{"api_key":"[生成したAPIキー]", "test_suite_version":{"name":"update_test_suite","label_category1":"update_sample"}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートid]"
+
+delete:
+  operationId: DeleteTestSuite
+  tags:
+    - TestSuite
+  summary: テストスイートの削除
+  description: |
+    テストスイートを削除します。<br>
+    レスポンスボディは返りません。
+  parameters:
+    - $ref: ../components/parameters/test_suite_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '204':
+      $ref: ../components/responses/NoResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request DELETE \
+          "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートid]?api_key=[生成したAPIキー]"

@@ -1,0 +1,6 @@
+name: api_key
+in: query
+description: プロジェクトのAPIキー
+required: true
+schema:
+  type: string

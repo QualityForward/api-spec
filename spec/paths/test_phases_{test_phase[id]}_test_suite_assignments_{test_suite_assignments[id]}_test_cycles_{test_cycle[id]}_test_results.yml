@@ -1,0 +1,57 @@
+get:
+  operationId: GetTestResults
+  tags:
+    - TestResult
+  summary: テスト結果の取得
+  description: |
+    テスト結果を取得します。<br>
+    テスト結果が存在しない場合、"next_url"がnullのJSONを取得します。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '200':
+      $ref: ../components/responses/getTestResultsResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --get\
+          --data "api_key=[生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]/test_results"
+post:
+  operationId: PostTestResult
+  tags:
+    - TestResult
+  summary: テスト結果入力・上書き
+  description: |
+    任意のテストサイクルにテスト結果を入力します。<br>
+    すでに結果がある項目に対しては上書きを行います。<br>
+    必須項目の値が不正な場合はエラーが返ります。<br>
+    テスト結果自由項目（test_result[content]）の数は契約内容に応じて異なります。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postTestResultRequest.yml
+  responses:
+    '201':
+      $ref: ../components/responses/postTestResultResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+    '422':
+      $ref: ../components/responses/postFailTestResultResponse.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key":"[生成したAPIキー]","test_result":{"result":1,"user_id":1111,"executed_at":"2024-07-01","test_case_no":1}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストバージョンid]/test_cycles/[対象のテストサイクルid]/test_results"

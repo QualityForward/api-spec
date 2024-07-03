@@ -1,0 +1,9 @@
+name: test_case[id]
+in: path
+description: >
+  テストケース固有ID<br>
+  [Get]テストケース情報の取得で取得可能です。
+
+required: true
+schema:
+  type: string

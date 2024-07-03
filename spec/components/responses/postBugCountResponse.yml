@@ -1,0 +1,9 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/BugCountCreateResponse.yml
+    example:
+      target_date: '2023-05-13'
+      open_count: 6
+      close_count: 2

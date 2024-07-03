@@ -1,0 +1,24 @@
+get:
+  operationId: GetTestCycleCSV
+  tags:
+    - TestCycle
+  summary: テストサイクルのCSV出力
+  description: |
+    テストサイクルの情報をCSV形式で出力します。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '200':
+      $ref: ../components/responses/getTestCycleCSVResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --get 
+          --data "api_key=[生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid].csv"

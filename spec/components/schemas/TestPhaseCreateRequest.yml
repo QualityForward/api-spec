@@ -1,0 +1,56 @@
+type: object
+properties:
+  test_phase[name]:
+    type: string
+    description: テストフェーズの名前
+  test_phase[start_on]:
+    type: string
+    format: date-time
+    description: テストフェーズの開始日
+  test_phase[end_on]:
+    type: string
+    format: date-time
+    description: テストフェーズの終了日
+  test_phase[redmine_issues_url]:
+    type: string
+    description: Redmineの新規チケット作成画面のURL
+  test_phase[redmine_base_url]:
+    type: string
+    description: RedmineのベースURL
+  test_phase[redmine_latest_issues_url]:
+    type: string
+    description: Redmineの最近のインシデント取得用URL
+  test_phase[jira_username]:
+    type: string
+    description: JIRAのユーザ名
+  test_phase[jira_site]:
+    type: string
+    description: JIRAのURL
+  test_phase[jira_context_path]:
+    type: string
+    description: JIRAのコンテキストパス
+  test_phase[jira_jql]:
+    type: string
+    description: JIRAのJQL
+  test_phase[bug_tracking_system]:
+    type: integer
+    description: Redmineは1、JIRAは2
+  test_phase[reviewer_emails]:
+    type: string
+    description: レビュアーのメールアドレス
+  test_phase[archived]:
+    type: boolean
+    description: アーカイブの有無
+  test_phase[jira_password]:
+    type: string
+    description: JIRAのパスワード
+  test_phase[test_suite_version_ids]:
+    type: array
+    description: 紐づけたいテストスイートバージョンID
+    items:
+      type: integer
+required:
+  - test_phase[name]
+  - test_phase[start_on]
+  - test_phase[end_on]
+  - test_phase[test_suite_version_ids][]

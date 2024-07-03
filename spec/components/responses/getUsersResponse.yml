@@ -1,0 +1,17 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Users.yml
+    example:
+      users:
+        - id: 87503
+          current_tenant_id: 25883
+          email: user_171@example.com
+          name: user_171
+          confirmed: true
+        - id: 87503
+          current_tenant_id: 25883
+          email: user_170@example.com
+          name: user_170
+          confirmed: true

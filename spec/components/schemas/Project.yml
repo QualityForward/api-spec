@@ -1,0 +1,139 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  tenant:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      cidr_whitelist:
+        type: string
+  name:
+    type: string
+  description:
+    type: string
+  label_pass:
+    type: string
+  label_fail:
+    type: string
+  label_skip:
+    type: string
+  label_cut:
+    type: string
+  label_block:
+    type: string
+  label_na:
+    type: string
+  label_qa:
+    type: string
+  excluded_from_progress_pass:
+    type: boolean
+  excluded_from_progress_fail:
+    type: boolean
+  excluded_from_progress_skip:
+    type: boolean
+  excluded_from_progress_cut:
+    type: boolean
+  excluded_from_progress_block:
+    type: boolean
+  excluded_from_progress_na:
+    type: boolean
+  excluded_from_progress_qa:
+    type: boolean
+  supplement_pass:
+    type: string
+  supplement_fail:
+    type: string
+  supplement_skip:
+    type: string
+  supplement_cut:
+    type: string
+  supplement_block:
+    type: string
+  supplement_na:
+    type: string
+  supplement_qa:
+    type: string
+  default_label_category1:
+    type: string
+  default_label_category2:
+    type: string
+  default_label_category3:
+    type: string
+  default_label_category4:
+    type: string
+  default_label_category5:
+    type: string
+  default_label_category6:
+    type: string
+  default_label_category7:
+    type: string
+  default_label_category8:
+    type: string
+  default_label_category9:
+    type: string
+  default_label_category10:
+    type: string
+  default_label_category11:
+    type: string
+  default_label_category12:
+    type: string
+  default_label_category13:
+    type: string
+  default_label_category14:
+    type: string
+  default_label_category15:
+    type: string
+  default_label_category16:
+    type: string
+  default_label_category17:
+    type: string
+  default_label_category18:
+    type: string
+  default_label_category19:
+    type: string
+  default_label_category20:
+    type: string
+  default_label_category21:
+    type: string
+  default_label_category22:
+    type: string
+  default_label_category23:
+    type: string
+  default_label_category24:
+    type: string
+  default_label_category25:
+    type: string
+  default_label_content1:
+    type: string
+  default_label_content2:
+    type: string
+  default_label_content3:
+    type: string
+  default_label_content4:
+    type: string
+  default_label_content5:
+    type: string
+  default_label_content6:
+    type: string
+  default_label_content7:
+    type: string
+  default_label_content8:
+    type: string
+  default_label_content9:
+    type: string
+  default_label_content10:
+    type: string
+  archived:
+    type: boolean
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

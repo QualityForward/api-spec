@@ -1,0 +1,29 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/TestCycles.yml
+    examples:
+      テストサイクル数が一定以上の場合:
+        value:
+          test_cycles:
+            - id: 428
+              status: null
+              name: null
+              target_priorities:
+                - A
+              target_results:
+                - null
+              target_test_case_no_list:
+                - 1
+                - 2
+              test_suite_assignment_id: 3636
+              start_on: '2020-08-26'
+              end_on: '2020-08-29'
+              tester_id: null
+              created_at: '2020-08-27T14:27:36.376+09:00'
+              updated_at: '2020-08-27T14:27:36.376+09:00'
+      テストサイクル数が一定以下の場合:
+        value:
+          test_cycles: 
+            - null

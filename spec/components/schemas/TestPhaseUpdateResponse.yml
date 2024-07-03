@@ -1,0 +1,39 @@
+type: object
+properties:
+  id:
+    type: integer
+  project_id:
+    type: integer
+  name:
+    type: string
+  start_on:
+    type: string
+    format: date-time
+  end_on:
+    type: string
+    format: date-time
+  redmine_issues_url:
+    type: string
+  test_suite_assignments:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        test_phase_id:
+          type: integer
+        test_suite_version_id:
+          type: integer
+        test_suite_name:
+          type: string
+        test_suite_version_name:
+          type: string
+  archived:
+    type: boolean
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

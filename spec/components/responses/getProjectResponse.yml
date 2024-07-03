@@ -1,0 +1,72 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Project.yml
+    example:
+      id: 77570
+      tenant:
+        id: 25822
+        name: tenant_0001
+        cidr_whitelist: ""
+      name: project_1
+      description: description_1
+      label_pass: pass
+      label_fail: fail
+      label_skip: skip
+      label_cut: cut
+      label_block: block
+      label_na: na
+      label_qa: qa
+      excluded_from_progress_pass: false
+      excluded_from_progress_fail: false
+      excluded_from_progress_skip: false
+      excluded_from_progress_cut: false
+      excluded_from_progress_block: false
+      excluded_from_progress_na: false
+      excluded_from_progress_qa: false
+      supplement_pass: null
+      supplement_fail: null
+      supplement_skip: null
+      supplement_cut: null
+      supplement_block: null
+      supplement_na: null
+      supplement_qa: null
+      default_label_category1: 項目1
+      default_label_category2: 項目2
+      default_label_category3: 項目3
+      default_label_category4: 項目4
+      default_label_category5: 項目5
+      default_label_category6: 項目6
+      default_label_category7: 項目7
+      default_label_category8: 項目8
+      default_label_category9: 項目9
+      default_label_category10: 項目10
+      default_label_category11: 項目11
+      default_label_category12: 項目12
+      default_label_category13: 項目13
+      default_label_category14: 項目14
+      default_label_category15: 項目15
+      default_label_category16: 項目16
+      default_label_category17: 項目17
+      default_label_category18: 項目18
+      default_label_category19: 項目19
+      default_label_category20: 項目20
+      default_label_category21: 項目21
+      default_label_category22: 項目22
+      default_label_category23: 項目23
+      default_label_category24: 項目24
+      default_label_category25: 項目25
+      default_label_content1: 環境
+      default_label_content2: バグID
+      default_label_content3: 備考
+      default_label_content4: content4
+      default_label_content5: content5
+      default_label_content6: content6
+      default_label_content7: content7
+      default_label_content8: content8
+      default_label_content9: content9
+      default_label_content10: content10
+      archived: false
+      created_at: '2020-02-27T14:27:38.415+09:00'
+      updated_at: '2020-02-27T14:27:38.415+0'

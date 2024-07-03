@@ -1,0 +1,57 @@
+patch:
+  operationId: PatchTestResult
+  tags:
+    - TestResult
+  summary: テスト結果の更新
+  description: |
+    任意のテスト結果内容を更新します。<br>
+    必須項目の更新は値が入力されていない場合、エラーが返ります。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/test_result_test_case_no.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/patchTestResultRequest.yml
+  responses:
+    '200':
+      $ref: ../components/responses/patchTestResultResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+    '422':
+      $ref: ../components/responses/patchFailTestResultResponse.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request PATCH \
+          --header "Content-Type: application/json" \
+          --data '{"api_key":"[生成したAPIキー]","test_result":{"result":2,"user_id":1111,"executed_at":"2024-07-02"}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]/test_results/[対象のテストケースNo]"
+delete:
+  operationId: DeleteTestResult
+  tags:
+    - TestResult
+  summary: テスト結果の削除
+  description: |
+    任意のテストケースに入力されたテスト結果を削除します。<br>
+    レスポンスボディは返りません。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/test_result_test_case_no.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '204':
+      $ref: ../components/responses/NoResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request DELETE \
+          --header "Content-Type: application/json" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]/test_results/[対象のテストケースNo]?api_key=[生成したAPIキー]"

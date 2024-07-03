@@ -1,0 +1,29 @@
+post:
+  operationId: PostBugCount
+  tags:
+    - BugCount
+  summary: バグカウントの登録
+  description: |
+    任意のテストフェーズごとチャートにバグカウントを登録します。<br>
+    任意のテストスイート内にテストケースを作成します。<br>
+    必須項目の値が不正な場合はエラーが返ります。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postBugCountRequest.yml
+  responses:
+    '200':
+      $ref: ../components/responses/postBugCountResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+    '422':
+      $ref: ../components/responses/postFailBugCountResponse.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key":"[生成したAPIキー]","bug_count_snapshots":[{"target_date":"2024-07-01","open_count":5,"close_count":0}]}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/bug_count_snapshots/bulk_create"

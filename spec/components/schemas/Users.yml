@@ -1,0 +1,17 @@
+type: object
+properties:
+  users:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        current_tenant_id:
+          type: integer
+        email:
+          type: string
+        name:
+          type: string
+        confirmed:
+          type: boolean

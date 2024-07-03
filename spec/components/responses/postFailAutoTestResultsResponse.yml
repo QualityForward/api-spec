@@ -1,0 +1,8 @@
+description: 自動テスト結果連携に失敗した場合
+content:
+  application/json:
+    example:
+      error_messages:
+        - name: auto_test_result
+          auto_test_case_external_key: login_pass
+          error: Resultに指定できない値がセットされています

@@ -1,0 +1,12 @@
+name: test_suite_version[id]
+in: path
+description: >
+  テストスイートバージョンID
+
+
+  例）テストスイートバージョン設定のURLが以下の場合、test_suite_version[id]=3
+
+  `https://cloud.veriserve.co.jp/projects/1/test_suites/2/test_suite_versions/3/edit`
+required: true
+schema:
+  type: integer

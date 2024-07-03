@@ -1,0 +1,28 @@
+type: object
+properties:
+  test_suite_version[name]:
+    type: string
+    description: テストスイートバージョン名
+  test_suite_version[user_id]:
+    type: integer
+    description: バージョンの管理者
+  test_suite_version[note]:
+    type: string
+    description: 備考
+  test_suite_version[latest_test_cycle_duration_sec]:
+    type: integer
+    description: 直近の実行時間
+  test_suite_version[status]:
+    type: integer
+    description: バージョンのステータス（例：編集中＝1、利用可＝2、利用不可＝3、レビュー待ち＝4）
+  test_suite_version[lock]:
+    type: boolean
+    description: バージョンのロックの有無
+  test_suite_version[lock_memo]:
+    type: string
+    description: 一言メモの内容
+  test_suite_version[tag_list]:
+    type: string
+    description: 登録しているタグ
+required:
+  - test_suite_version[name]

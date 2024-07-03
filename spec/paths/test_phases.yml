@@ -1,0 +1,47 @@
+get:
+  operationId: GetTestPhases
+  tags:
+    - TestPhase
+  summary: テストフェーズ情報の取得
+  description: |
+    テストフェーズの情報を取得します。<br>
+    テストフェーズの数が一定以下の場合は”next_url”がnullのJSONを取得します。
+  parameters:
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '200':
+      $ref: ../components/responses/getTestPhasesResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --get \
+          --data "api_key=生成したAPIキー" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases"
+post:
+  operationId: PostTestPhase
+  tags:
+    - TestPhase
+  summary: テストフェーズの作成
+  description: |
+    テストフェーズを作成します。<br>
+    必須項目の値が不正な場合はエラーが返ります。
+  parameters:
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postTestPhaseRequest.yml
+  responses:
+    '201':
+      $ref: ../components/responses/postTestPhaseResponse.yml
+    '422':
+      $ref: ../components/responses/postFailTestPhaseResponse.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key": "[生成したAPIキー]", "test_phase":{"name":"sample-test-phase","start_on":"2024-07-01","end_on":"2024-08-01","test_suite_version_ids":[1,2,3]}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases"

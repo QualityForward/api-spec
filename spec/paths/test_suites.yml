@@ -1,0 +1,53 @@
+get:
+  operationId: GetTestSuites
+  tags:
+    - TestSuite
+  summary: テストスイート情報の取得
+  description: |
+    テストスイートの情報を取得します。<br>
+    テストスイートが存在しない場合は”next_url”がnullのJSONを取得します。
+  parameters:
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '200':
+      $ref: ../components/responses/getTestSuitesResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --get \
+          --data "api_key=[生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_suites"
+post:
+  operationId: PostTestSuite
+  tags:
+    - TestSuite
+  summary: テストスイートの作成
+  description: >
+    テストスイートを作成します。
+
+
+    テストスイートの名前（test_suite[name]）がない場合、カバレッジパネルの集計に利用するテスト定義項目の番号（coverage_panel_column）またはテストブロッカーの集計に利用するテスト定義項目の番号（test_blocker_column）に不正な値が入力されている場合はエラーが返ります。<br>
+
+
+    テスト定義項目ラベル（test_suite[label_category]）、テスト結果ラベル（test_suite[label_content1]）の上限はお申込内容に応じて異なります。
+  parameters:
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postTestSuiteRequest.yml
+  responses:
+    '201':
+      $ref: ../components/responses/postTestSuiteResponse.yml
+    '422':
+      $ref: ../components/responses/postFailTestSuiteResponse.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key":"[生成したAPIキー]", "test_suite":{"name":"sample","label_category1": "label","use_category1": true}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_suites"
+

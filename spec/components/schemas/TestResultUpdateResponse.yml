@@ -1,0 +1,56 @@
+type: object
+properties:
+  id:
+    type: integer
+  user:
+    type: object
+    properties:
+      id:
+        type: integer
+      current_tenant_id:
+        type: integer
+      email:
+        type: string
+      name:
+        type: string
+      confirmed:
+        type: boolean
+  test_case_id:
+    type: integer
+  test_case_no:
+    type: integer
+  test_cycle_id:
+    type: integer
+  result:
+    type: string
+  result_supplement:
+    type: integer
+  executed_at:
+    type: string
+    format: date-time
+  content1:
+    type: string
+  content2:
+    type: string
+  content3:
+    type: string
+  content4:
+    type: string
+  content5:
+    type: string
+  content6:
+    type: string
+  content7:
+    type: string
+  content8:
+    type: string
+  content9:
+    type: string
+  content10:
+    type: string
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

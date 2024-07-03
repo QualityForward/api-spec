@@ -1,0 +1,185 @@
+type: object
+properties:
+  test_cycle[status]:
+    type: integer
+    description: |
+      テストサイクルの状態<br>
+      例）<br>
+      未実施=1<br>
+      テスト中=2<br>
+      レビュー待ち=3<br>
+      完了=4<br>
+  test_cycle[name]:
+    type: string
+    description: テストサイクルの名前
+  test_cycle[target_priorities]:
+    type: array
+    description: 対象の優先度
+    items:
+      type: string
+  test_cycle[start_on]:
+    type: string
+    format: date-time
+    description: テストサイクルの開始日
+  test_cycle[end_on]:
+    type: string
+    format: date-time
+    description: テストサイクルの終了日
+  test_cycle[default_value_content1]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content2]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content3]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content4]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content5]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content6]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content7]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content8]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content9]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content10]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content11]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content12]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content13]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content14]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content15]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content16]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content17]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content18]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content19]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content20]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content21]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content22]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content23]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content24]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content25]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content26]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content27]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content28]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content29]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content30]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content31]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content32]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content33]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content34]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content35]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content36]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content37]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content38]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content39]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content40]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content41]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content42]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content43]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content44]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content45]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content46]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content47]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content48]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content49]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[default_value_content50]:
+    type: string
+    description: デフォルト値設定
+  test_cycle[tester_id]:
+    type: integer
+    description: テスト担当者
+required:
+  - test_cycle[name]
+  - test_cycle[target_priorities][]
+  - test_cycle[start_on]
+  - test_cycle[end_on]

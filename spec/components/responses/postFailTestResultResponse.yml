@@ -1,0 +1,11 @@
+description: 必須項目の値が不正な場合
+content:
+  application/json:
+    example:
+      test_case:
+        - must exist
+        - に指定できない値がセットされています
+      user:
+        - が見つかりません
+      executed_at:
+        - を入力してください

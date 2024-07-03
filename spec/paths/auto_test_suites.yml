@@ -1,0 +1,17 @@
+post:
+  operationId: PostAutoTestResults
+  tags:
+    - AutoTestResult
+  summary: 自動テスト結果入力
+  description: |
+    自動テストの結果を入力します。<br>
+    必須項目の値が不正な場合はエラーが返ります。
+  parameters:
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postAutoTestResultsRequest.yml
+  responses:
+    '201':
+      $ref: ../components/responses/NoResponse.yml
+    '422':
+      $ref: ../components/responses/postFailAutoTestResultsResponse.yml

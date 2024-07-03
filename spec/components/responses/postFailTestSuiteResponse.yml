@@ -1,0 +1,24 @@
+description: 失敗時
+content:
+  application/json:
+    examples:
+      テストスイートの名前がない場合:
+        value:
+          name:
+            - を入力してください
+      coverage_panel_columnが0の場合:
+        value:
+          coverage_panel_column:
+            - は1以上の値にしてください
+      coverage_panel_columnが26以上の場合:
+        value:
+          coverage_panel_column:
+            - は25以下の値にしてください
+      test_blocker_columnが0の場合:
+        value:
+          test_blocker_column:
+            - は1以上の値にしてください
+      test_blocker_columnが11以上の場合:
+        value:
+          test_blocker_column:
+            - は10以下の値にしてください

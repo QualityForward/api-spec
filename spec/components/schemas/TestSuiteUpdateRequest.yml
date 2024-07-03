@@ -1,0 +1,239 @@
+type: object
+properties:
+  test_suite[name]:
+    type: string
+    description: テストスイート名
+    example: テストスイート
+  test_suite[label_category1]:
+    type: string
+    description: テスト定義項目ラベル1の名前
+  test_suite[label_category2]:
+    type: string
+    description: テスト定義項目ラベル2の名前
+  test_suite[label_category3]:
+    type: string
+    description: テスト定義項目ラベル3の名前
+  test_suite[label_category4]:
+    type: string
+    description: テスト定義項目ラベル4の名前
+  test_suite[label_category5]:
+    type: string
+    description: テスト定義項目ラベル5の名前
+  test_suite[label_category6]:
+    type: string
+    description: テスト定義項目ラベル6の名前
+  test_suite[label_category7]:
+    type: string
+    description: テスト定義項目ラベル7の名前
+  test_suite[label_category8]:
+    type: string
+    description: テスト定義項目ラベル8の名前
+  test_suite[label_category9]:
+    type: string
+    description: テスト定義項目ラベル9の名前
+  test_suite[label_category10]:
+    type: string
+    description: テスト定義項目ラベル10の名前
+  test_suite[label_category11]:
+    type: string
+    description: テスト定義項目ラベル11の名前
+  test_suite[label_category12]:
+    type: string
+    description: テスト定義項目ラベル12の名前
+  test_suite[label_category13]:
+    type: string
+    description: テスト定義項目ラベル13の名前
+  test_suite[label_category14]:
+    type: string
+    description: テスト定義項目ラベル14の名前
+  test_suite[label_category15]:
+    type: string
+    description: テスト定義項目ラベル15の名前
+  test_suite[label_category16]:
+    type: string
+    description: テスト定義項目ラベル16の名前
+  test_suite[label_category17]:
+    type: string
+    description: テスト定義項目ラベル17の名前
+  test_suite[label_category18]:
+    type: string
+    description: テスト定義項目ラベル18の名前
+  test_suite[label_category19]:
+    type: string
+    description: テスト定義項目ラベル19の名前
+  test_suite[label_category20]:
+    type: string
+    description: テスト定義項目ラベル20の名前
+  test_suite[label_category21]:
+    type: string
+    description: テスト定義項目ラベル21の名前
+  test_suite[label_category22]:
+    type: string
+    description: テスト定義項目ラベル22の名前
+  test_suite[label_category23]:
+    type: string
+    description: テスト定義項目ラベル23の名前
+  test_suite[label_category24]:
+    type: string
+    description: テスト定義項目ラベル24の名前
+  test_suite[label_category25]:
+    type: string
+    description: テスト定義項目ラベル25の名前
+  test_suite[use_category1]:
+    type: boolean
+    description: テスト定義項目ラベル1を使用の有無
+  test_suite[use_category2]:
+    type: boolean
+    description: テスト定義項目ラベル2を使用の有無
+  test_suite[use_category3]:
+    type: boolean
+    description: テスト定義項目ラベル3を使用の有無
+  test_suite[use_category4]:
+    type: boolean
+    description: テスト定義項目ラベル4を使用の有無
+  test_suite[use_category5]:
+    type: boolean
+    description: テスト定義項目ラベル5を使用の有無
+  test_suite[use_category6]:
+    type: boolean
+    description: テスト定義項目ラベル6を使用の有無
+  test_suite[use_category7]:
+    type: boolean
+    description: テスト定義項目ラベル7を使用の有無
+  test_suite[use_category8]:
+    type: boolean
+    description: テスト定義項目ラベル8を使用の有無
+  test_suite[use_category9]:
+    type: boolean
+    description: テスト定義項目ラベル9を使用の有無
+  test_suite[use_category10]:
+    type: boolean
+    description: テスト定義項目ラベル10を使用の有無
+  test_suite[use_category11]:
+    type: boolean
+    description: テスト定義項目ラベル11を使用の有無
+  test_suite[use_category12]:
+    type: boolean
+    description: テスト定義項目ラベル12を使用の有無
+  test_suite[use_category13]:
+    type: boolean
+    description: テスト定義項目ラベル13を使用の有無
+  test_suite[use_category14]:
+    type: boolean
+    description: テスト定義項目ラベル14を使用の有無
+  test_suite[use_category15]:
+    type: boolean
+    description: テスト定義項目ラベル15を使用の有無
+  test_suite[use_category16]:
+    type: boolean
+    description: テスト定義項目ラベル16を使用の有無
+  test_suite[use_category17]:
+    type: boolean
+    description: テスト定義項目ラベル17を使用の有無
+  test_suite[use_category18]:
+    type: boolean
+    description: テスト定義項目ラベル18を使用の有無
+  test_suite[use_category19]:
+    type: boolean
+    description: テスト定義項目ラベル19を使用の有無
+  test_suite[use_category20]:
+    type: boolean
+    description: テスト定義項目ラベル20を使用の有無
+  test_suite[use_category21]:
+    type: boolean
+    description: テスト定義項目ラベル21を使用の有無
+  test_suite[use_category22]:
+    type: boolean
+    description: テスト定義項目ラベル22を使用の有無
+  test_suite[use_category23]:
+    type: boolean
+    description: テスト定義項目ラベル23を使用の有無
+  test_suite[use_category24]:
+    type: boolean
+    description: テスト定義項目ラベル24を使用の有無
+  test_suite[use_category25]:
+    type: boolean
+    description: テスト定義項目ラベル25を使用の有無
+  test_suite[label_content1]:
+    type: string
+    description: テスト結果項目ラベル1の名前
+  test_suite[label_content2]:
+    type: string
+    description: テスト結果項目ラベル2の名前
+  test_suite[label_content3]:
+    type: string
+    description: テスト結果項目ラベル3の名前
+  test_suite[label_content4]:
+    type: string
+    description: テスト結果項目ラベル4の名前
+  test_suite[label_content5]:
+    type: string
+    description: テスト結果項目ラベル5の名前
+  test_suite[label_content6]:
+    type: string
+    description: テスト結果項目ラベル6の名前
+  test_suite[label_content7]:
+    type: string
+    description: テスト結果項目ラベル7の名前
+  test_suite[label_content8]:
+    type: string
+    description: テスト結果項目ラベル8の名前
+  test_suite[label_content9]:
+    type: string
+    description: テスト結果項目ラベル9の名前
+  test_suite[label_content10]:
+    type: string
+    description: テスト結果項目ラベル10の名前
+  test_suite[use_content1]:
+    type: boolean
+    description: テスト結果項目ラベル1を使用の有無
+  test_suite[use_content2]:
+    type: boolean
+    description: テスト結果項目ラベル2を使用の有無
+  test_suite[use_content3]:
+    type: boolean
+    description: テスト結果項目ラベル3を使用の有無
+  test_suite[use_content4]:
+    type: boolean
+    description: テスト結果項目ラベル4を使用の有無
+  test_suite[use_content5]:
+    type: boolean
+    description: テスト結果項目ラベル5を使用の有無
+  test_suite[use_content6]:
+    type: boolean
+    description: テスト結果項目ラベル6を使用の有無
+  test_suite[use_content7]:
+    type: boolean
+    description: テスト結果項目ラベル7を使用の有無
+  test_suite[use_content8]:
+    type: boolean
+    description: テスト結果項目ラベル8を使用の有無
+  test_suite[use_content9]:
+    type: boolean
+    description: テスト結果項目ラベル9を使用の有無
+  test_suite[use_content10]:
+    type: boolean
+    description: テスト結果項目ラベル10を使用の有無
+  test_suite[coverage_panel_column]:
+    type: integer
+    description: カバレッジパネルの集計に利用するテスト定義項目の番号
+  test_suite[created_at]:
+    type: string
+    format: date-time
+    description: テストスイート作成日時
+  test_suite[updated_at]:
+    type: string
+    format: date-time
+    description: テストスイート更新日時
+  test_suite[additional_headers_json_string]:
+    type: string
+    description: 追加ヘッダ設定の内容
+  test_suite[archived]:
+    type: boolean
+    description: アーカイブ済みの有無
+  test_suite[test_model_id]:
+    type: integer
+    description: テスト要求ツリーID
+  test_suite[test_blocker_column]:
+    type: integer
+    description: テストブロッカーの集計に利用するテスト定義項目の番号

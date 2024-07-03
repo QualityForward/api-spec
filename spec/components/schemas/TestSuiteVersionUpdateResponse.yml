@@ -1,0 +1,37 @@
+type: object
+properties:
+  id:
+    type: integer
+  test_suite_id:
+    type: integer
+  name:
+    type: string
+  status:
+    type: string
+  user:
+    type: object
+    properties:
+      id:
+        type: integer
+      current_tenant_id:
+        type: integer
+      email:
+        type: string
+      name:
+        type: string
+      confirmed:
+        type: boolean
+  note:
+    type: string
+  latest_test_cycle_duration_sec:
+    type: integer
+  lock:
+    type: boolean
+  lock_memo:
+    type: string
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

@@ -1,0 +1,12 @@
+extends:
+  - recommended
+
+apis:
+  core@v2:
+    root: ./spec/openapi.yml
+
+theme:
+  openapi:
+    theme: 
+      logo: 
+        gutter: 15px

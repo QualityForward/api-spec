@@ -1,0 +1,7 @@
+description: 値が不正な場合
+content:
+  application/json:
+    example:
+      error_messages:
+        - 'no': 21
+          error: 優先度に指定できない値がセットされています

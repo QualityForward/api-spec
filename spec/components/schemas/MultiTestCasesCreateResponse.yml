@@ -1,0 +1,71 @@
+type: object
+properties:
+  test_cases:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        test_suite_version_id:
+          type: integer
+        no:
+          type: integer
+        priority:
+          type: string
+        category1:
+          type: string
+        category2:
+          type: string
+        category3:
+          type: string
+        category4:
+          type: string
+        category5:
+          type: string
+        category6:
+          type: string
+        category7:
+          type: string
+        category8:
+          type: string
+        category9:
+          type: string
+        category10:
+          type: string
+        category11:
+          type: string
+        category12:
+          type: string
+        category13:
+          type: string
+        category14:
+          type: string
+        category15:
+          type: string
+        category16:
+          type: string
+        category17:
+          type: string
+        category18:
+          type: string
+        category19:
+          type: string
+        category20:
+          type: string
+        category21:
+          type: string
+        category22:
+          type: string
+        category23:
+          type: string
+        category24:
+          type: string
+        category25:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time

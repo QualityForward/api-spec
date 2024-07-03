@@ -1,0 +1,6 @@
+description: 存在しない時
+content:
+  application/json:
+    example:
+      status: 404
+      error: Not Found

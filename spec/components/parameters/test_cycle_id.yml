@@ -1,0 +1,12 @@
+name: test_cycle[id]
+in: path
+description: >
+  テストサイクルID
+
+
+  例）テストサイクル設定画面のURLが以下の場合、test_cycle[id]=4
+
+  `https://cloud.veriserve.co.jp/projects/1/test_phases/2/test_suite_assignments/3/test_cycles/4`
+required: true
+schema:
+  type: integer

@@ -1,0 +1,22 @@
+get:
+  operationId: GetUsers
+  tags:
+    - User
+  summary: ユーザ情報の取得
+  description: |
+    ユーザの情報を取得します。<br>
+    ユーザ数が特定以下の場合は"next_url"がnullのJSONを取得します。
+  parameters:
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    '200':
+      $ref: ../components/responses/getUsersResponse.yml
+    '404':
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl --get \
+          --data "api_key=[生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/users"
