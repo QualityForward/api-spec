@@ -5,7 +5,9 @@ properties:
     description: 自動テストツール・システム側にて、複数のテストケースがまとめられたテスト実行単位に付与している一意のIDや名前
   auto_test_cycle_name:
     type: string
-    description: レポート表示時に、当該テスト実行回に付与する名前。定期実行の場合は、タイムスタンプなどの指定を推奨
+    description: |
+      レポート表示時に、当該テスト実行回に付与する名前<br>
+      定期実行の場合は、タイムスタンプなどの指定を推奨
   auto_test_results:
     type: array
     items:
@@ -16,7 +18,16 @@ properties:
           description: 自動テストツール・システム側にて、pass/failが決まる1件ごとのテストケース単位に付与している一意のIDや名前
         result:
           type: string
-          description: テスト結果
+          description: |
+            テスト結果
+
+            <受理できる値>
+            - pass
+            - fail
+            - error
+            - skip
+
+            "error"は、テストの結果判定ができず、なんらかの理由でランタイムエラーを起こした際に利用
         execution_time_taken:
           type: integer
           description: テスト実行時間（単位はミリ秒）
