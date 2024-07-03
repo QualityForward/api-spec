@@ -39,7 +39,7 @@ info:
 
     高頻度なリクエスト送信が行われた際に、動作が不安定になる事象を回避するためAPIサーバへ送信できるリクエスト数が1秒間1リクエストに制限されております。<br>
 
-    リクエスト数が上限を超えた場合、APIサーバは429（Too many requests）を返します。
+    リクエスト数が上限を超えた場合、APIサーバは`429 Too many requests`を返します。
 
 
     ### レスポンスヘッダ
@@ -52,11 +52,11 @@ info:
 
     |:--|:--|
 
-    |ratelimit-limit|1秒間に受付可能な最大リクエスト数|
+    |`ratelimit-limit`|1秒間に受付可能な最大リクエスト数|
 
-    |ratelimit-remaining|retelimit-resetの時刻までに受付可能な残りリクエスト数|
+    |`ratelimit-remaining`|`retelimit-reset`の時刻までに受付可能な残りリクエスト数|
 
-    |ratelimit-reset|リクエスト数の計測がリセットされる時刻（UNIX時刻）|
+    |`ratelimit-reset`|リクエスト数の計測がリセットされる時刻（UNIX時刻）|
 
     ## ページネーション
 
@@ -93,11 +93,11 @@ info:
 
     |:--|:--|:--|
 
-    |total_pages|integer|ページの総数|
+    |`total_pages`|integer|ページの総数|
 
-    |current_page|integer|現在のページ数|
+    |`current_page`|integer|現在のページ数|
 
-    |next_url|string|データの次ページを返すための値。エンドポイントに`next_url`を指定する。|
+    |`next_url`|string|データの次ページを返すための値。エンドポイントに`next_url`を指定する。|
 
   x-logo:
     url: >-
