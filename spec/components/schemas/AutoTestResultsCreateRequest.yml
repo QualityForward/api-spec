@@ -19,7 +19,7 @@ properties:
           description: テスト結果
         execution_time_taken:
           type: integer
-          description: テスト実行時間
+          description: テスト実行時間（単位はミリ秒）
         info_url:
           type: string
           description: 当該テスト結果に関する詳細情報が記載されたWebページのURL
