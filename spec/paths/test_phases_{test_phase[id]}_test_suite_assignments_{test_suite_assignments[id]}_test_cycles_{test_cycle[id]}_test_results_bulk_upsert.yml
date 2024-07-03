@@ -2,7 +2,7 @@ post:
   operationId: PostMultiTestResults
   tags:
     - TestResult
-  summary: 複数テスト結果の入力・上書き
+  summary: 複数テスト結果入力・上書き
   description: |
     任意のテストサイクルにテスト結果を入力します。<br>
     すでに結果がある項目に対しては上書きを行います。<br>
