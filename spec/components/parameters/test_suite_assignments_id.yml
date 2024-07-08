@@ -1,8 +1,7 @@
 name: test_suite_assignments[id]
 in: path
 description: >
-  テストフェーズに紐づけられたテストスイートID
-
+  テストフェーズに紐づけられたテストスイートID<br>
   例）テストフェーズの対象テストスイート一覧画面のURLが以下の場合、test_suite_assignments[id]=3
 
   `https://cloud.veriserve.co.jp/projects/1/test_phases/2/test_suite_assignments/3/test_cycles`
