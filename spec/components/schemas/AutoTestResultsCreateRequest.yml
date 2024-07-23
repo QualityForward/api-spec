@@ -18,15 +18,14 @@ properties:
           description: 自動テストツール・システム側にて、pass/failが決まる1件ごとのテストケース単位に付与している一意のIDや名前
         result:
           type: string
-          description: |
-            テスト結果
-
-            <受理できる値>
+          enum: 
             - pass
             - fail
             - error
             - skip
-
+          description: |
+            自動テスト結果
+            
             "error"は、テストの結果判定ができず、なんらかの理由でランタイムエラーを起こした際に利用
         execution_time_taken:
           type: integer

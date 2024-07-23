@@ -9,12 +9,28 @@ properties:
           type: integer
         status:
           type: string
+          enum:
+            - unexecuted
+            - in_progress
+            - waiting_for_review
+            - complete
         name:
           type: string
         target_priorities:
           type: array
           items:
             type: string
+            enum: 
+              - A
+              - B
+              - C
+              - D
+              - E
+              - F
+              - G
+              - H
+              - I
+              - J
         target_results:
           type: array
           items:

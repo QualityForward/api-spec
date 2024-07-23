@@ -10,8 +10,20 @@ properties:
           description: テストケース識別ID
         priority:
           type: integer
+          enum: 
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
           description: |
-            テストケースの優先度<br>
+            テストケースの優先度
+
             例）A=1 ~ J=10
         category1:
           type: string

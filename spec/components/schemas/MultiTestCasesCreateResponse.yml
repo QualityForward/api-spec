@@ -13,6 +13,17 @@ properties:
           type: integer
         priority:
           type: string
+          enum: 
+            - A
+            - B
+            - C
+            - D
+            - E
+            - F
+            - G
+            - H
+            - I
+            - J
         category1:
           type: string
         category2:

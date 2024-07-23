@@ -14,13 +14,20 @@ properties:
         description: 備考
       status:
         type: integer
+        enum: 
+          - 1
+          - 2
+          - 3
+          - 4
         description: |
-          バージョンのステータス<br>
-          （例）
-          - 編集中=1
-          - 利用可=2
-          - 利用不可=3
-          - レビュー待ち=4
+          バージョンのステータス
+
+          |Enum Value|Description|
+          |:--:|:--|
+          |1|編集中|
+          |2|利用可|
+          |3|利用不可|
+          |4|レビュー待ち|
       lock:
         type: boolean
         description: バージョンのロックの有無

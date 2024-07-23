@@ -5,13 +5,20 @@ properties:
     properties:
       status:
         type: integer
+        enum: 
+          - 1
+          - 2
+          - 3
+          - 4
         description: |
-          テストサイクルの状態<br>
-          例）<br>
-          未実施＝1<br>
-          テスト中＝2<br>
-          レビュー待ち＝3<br>
-          完了＝4<br>
+          テストサイクルの状態
+
+          |Enum Value|Description|
+          |:--:|:--|
+          |1|未実施|
+          |2|テスト中|
+          |3|レビュー待ち|
+          |4|完了|
       created_at:
         type: string
         format: date-time
@@ -28,6 +35,17 @@ properties:
         description: 対象の優先度
         items:
           type: string
+          enum: 
+            - A
+            - B
+            - C
+            - D
+            - E
+            - F
+            - G
+            - H
+            - I
+            - J
       start_on:
         type: string
         format: date-time

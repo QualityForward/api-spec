@@ -28,6 +28,14 @@ properties:
           type: integer
         result:
           type: string
+          enum: 
+            - pass
+            - fail
+            - skip
+            - cut
+            - block
+            - na
+            - qa
         result_supplement:
           type: integer
         executed_at:

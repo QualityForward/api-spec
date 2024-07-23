@@ -37,7 +37,16 @@ properties:
         description: JIRAのJQL
       bug_tracking_system:
         type: integer
-        description: Redmineは1、JIRAは2
+        enum: 
+          - 1
+          - 2
+        description: |
+          バグトラッキングシステムの設定
+          
+          |Enum Value|Description|
+          |:--:|:--|
+          |1|Redmine|
+          |2|JIRA|
       reviewer_emails:
         type: string
         description: レビュアーのメールアドレス

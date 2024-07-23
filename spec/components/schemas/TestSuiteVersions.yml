@@ -13,6 +13,11 @@ properties:
           type: string
         status:
           type: string
+          enum: 
+            - draft
+            - available
+            - unavailable
+            - waiting_for_review
         user:
           type: object
           properties:
