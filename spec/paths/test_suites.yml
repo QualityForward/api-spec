@@ -29,10 +29,10 @@ post:
     テストスイートを作成します。
 
 
-    テストスイートの名前（test_suite[name]）がない場合、カバレッジパネルの集計に利用するテスト定義項目の番号（coverage_panel_column）またはテストブロッカーの集計に利用するテスト定義項目の番号（test_blocker_column）に不正な値が入力されている場合はエラーが返ります。<br>
+    テストスイートの名前（test_suite["name"]）がない場合、カバレッジパネルの集計に利用するテスト定義項目の番号（coverage_panel_column）またはテストブロッカーの集計に利用するテスト定義項目の番号（test_blocker_column）に不正な値が入力されている場合はエラーが返ります。<br>
 
 
-    テスト定義項目ラベル（test_suite[label_category]）、テスト結果ラベル（test_suite[label_content1]）の上限はお申込内容に応じて異なります。
+    テスト定義項目ラベル（test_suite["label_category"]）、テスト結果ラベル（test_suite["label_content1"]）の上限はお申込内容に応じて異なります。
   parameters:
     - $ref: ../components/parameters/api_key.yml
   requestBody:

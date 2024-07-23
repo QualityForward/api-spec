@@ -32,7 +32,7 @@ post:
     任意のテストサイクルにテスト結果を入力します。<br>
     すでに結果がある項目に対しては上書きを行います。<br>
     必須項目の値が不正な場合はエラーが返ります。<br>
-    テスト結果自由項目（test_result[content]）の数は契約内容に応じて異なります。
+    テスト結果自由項目（test_result["content"]）の数は契約内容に応じて異なります。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml

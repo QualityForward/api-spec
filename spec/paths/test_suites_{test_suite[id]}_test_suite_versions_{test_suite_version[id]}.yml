@@ -7,10 +7,10 @@ patch:
     テストスイートの情報を更新します。
 
 
-    テストスイートバージョン名（test_suite_version[name]）を更新する場合、値が入力されていないリクエストはエラーが返ります。
+    テストスイートバージョン名（test_suite_version["name"]）を更新する場合、値が入力されていないリクエストはエラーが返ります。
 
 
-    テスト定義項目（test_suite_version[label_category1]）、テスト結果ラベル（test_suite_version[label_content1]）の上限はお申込内容に応じて異なります。
+    テスト定義項目（test_suite_version["label_category1"]）、テスト結果ラベル（test_suite_version["label_content1"]）の上限はお申込内容に応じて異なります。
   parameters:
     - $ref: ../components/parameters/test_suite_id.yml
     - $ref: ../components/parameters/test_suite_version_id.yml

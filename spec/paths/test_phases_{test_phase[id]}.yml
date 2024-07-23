@@ -7,7 +7,7 @@ patch:
     テストフェーズを更新します。
 
 
-    テストフェーズ名（test_phase[name]）,フェーズ開始日（test_phase[start_on]）,フェーズ終了日（test_phase[end_on]）を更新する場合、値のないリクエストはエラーが返ります。
+    テストフェーズ名（test_phase["name"]）,フェーズ開始日（test_phase["start_on"]）,フェーズ終了日（test_phase["end_on"]）を更新する場合、値のないリクエストはエラーが返ります。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/api_key.yml
