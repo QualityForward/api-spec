@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: v2024070801
+  version: v2024072301
   title: QualityForward API
   description: >
     # API仕様
