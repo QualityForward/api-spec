@@ -1,8 +1,22 @@
 description: 自動テスト結果連携に失敗した場合
 content:
   application/json:
-    example:
-      error_messages:
-        - name: auto_test_result
-          auto_test_case_external_key: login_pass
-          error: Resultに指定できない値がセットされています
+    examples:
+      自動テスト結果に指定できない値が含まれている:
+        value:
+          error_messages:
+            - name: auto_test_result
+              auto_test_case_external_key: login_pass
+              error: Resultに指定できない値がセットされています
+      自動テスト結果数が0件:
+        value:
+          error_messages:
+            - auto_test_resultsは1件以上指定してください。
+      auto_test_suite_external_keyが未設定:
+        value:
+          error_messages:
+            - Auto test suite external keyを入力してください
+      auto_test_cycle_nameが未設定:
+        value:
+          error_messages:
+            - Auto test cycle nameを入力してください
