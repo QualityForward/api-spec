@@ -24,21 +24,35 @@ post:
         curl --request POST \
           --header "Content-Type: application/json" \
           --data '{
-            "api_key": "[生成したAPIキー]"
-            "auto_test_suite_external_key": "sample"
+            "api_key": "[生成したAPIキー]",
+            "auto_test_suite_external_key": "sample",
+            "auto_test_suite_name": "サンプル自動テスト",
             "auto_test_cycle_name": "2024-07-03",
+            "auto_execution_device_external_key": "ios17_4",
+            "auto_execution_device_name": "iOS+17.4",
             "auto_test_results": [
               {
                 "auto_test_case_external_key": "auto_sample1",
                 "result": "pass",
-                "execution_time_taken": 100,
-                "remark": "sample_test1"
               },
               {
                 "auto_test_case_external_key": "auto_sample2",
+                "auto_test_case_name": "サンプル自動テストケース2",
+                "auto_execution_pattern_external_key": "dataScenario1",
+                "auto_execution_pattern_name": "データシナリオ1"
                 "result": "fail",
                 "execution_time_taken": 100,
+                "info_url": "https://example.com"
                 "remark": "sample_test2"
+              },
+                "auto_test_case_external_key": "auto_sample2",
+                "auto_test_case_name": "サンプル自動テストケース2",
+                "auto_execution_pattern_external_key": "dataScenario2",
+                "auto_execution_pattern_name": "データシナリオ2"
+                "result": "pass",
+                "execution_time_taken": 100,
+                "info_url": "https://example.com"
+                "remark": "sample_test3"
               }
             ]
           }' \
