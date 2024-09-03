@@ -2,12 +2,33 @@ type: object
 properties:
   auto_test_suite_external_key:
     type: string
-    description: 自動テストツール・システム側にて、複数のテストケースがまとめられたテスト実行単位に付与している一意のIDや名前
+    description: 自動テストツール・システム側にて、複数のテストケースがまとめられたテスト実行単位に付与しているIDや名前
+  auto_test_suite_name:
+    type: string
+    description: |
+      自動テストスイート名<br>
+      未設定の場合、自動テスト安定性レポート-自動テストスイートにはauto_test_suite_external_keyの値が表示
   auto_test_cycle_name:
     type: string
     description: |
       レポート表示時に、当該テスト実行回に付与する名前<br>
       定期実行の場合は、タイムスタンプなどの指定を推奨
+  auto_execution_device_external_key:
+      type: string
+      description: 自動テスト実施環境のID
+  auto_execution_device_name:
+      type: string
+      description: |
+        自動テスト実施環境名<br>
+        `auto_execution_device_external_key`と`auto_execution_device_name`の設定によって、自動テスト安定性レポート-環境の表示名を制御します。
+
+        |`auto_execution_device_external_key`|`auto_execution_device_name`|自動テスト安定性レポート-環境|
+        |:--:|:--:|:--|
+        |設定済み|設定済み|`auto_execution_device_name`の設定値|
+        |未設定|未設定|`標準環境`|
+        |設定済み|未設定|`auto_execution_device_external_key`の設定値|
+        |未設定|設定済み|`標準環境`|
+
   auto_test_results:
     type: array
     items:
@@ -15,7 +36,29 @@ properties:
       properties: 
         auto_test_case_external_key:
           type: string
-          description: 自動テストツール・システム側にて、pass/failが決まる1件ごとのテストケース単位に付与している一意のIDや名前
+          description: 自動テストツール・システム側にて、pass/failが決まる1件ごとのテストケース単位に付与しているIDや名前
+        auto_test_case_name:
+          type: string
+          description: |
+            自動テストケース名<br>
+            未設定の場合、自動テスト安定性レポート-自動テストケースにはauto_test_case_external_keyの値が表示
+        auto_execution_pattern_external_key:
+          type: string
+          description: |
+            自動テスト実施時のデータパターンID
+        auto_execution_pattern_name:
+          type: string
+          description: |
+            自動テスト実行時に使用したデータパターン名<br>
+            `auto_execution_pattern_external_key`と`auto_execution_pattern_name`の設定によって、自動テスト安定性レポート-データパターンの表示名を制御します。<br>
+
+            |`auto_execution_pattern_external_key`|`auto_execution_pattern_name`|自動テスト安定性レポート-データパターン|
+            |:--:|:--:|:--|
+            |設定済み|設定済み|`auto_execution_pattern_name`の設定値|
+            |未設定|未設定|`標準データ`|
+            |設定済み|未設定|`auto_execution_pattern_external_key`の設定値|
+            |未設定|設定済み|`標準データ`|
+
         result:
           type: string
           enum: 
