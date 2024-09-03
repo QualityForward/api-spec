@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2024090401] - 2024/9/4
+
+### Added
+
+- POST 自動テスト結果入力
+  - リクエストボディのパラメータ追加
+    - auto_test_suite_name
+    - auto_execution_device_external_key
+    - auto_execution_device_name
+    - auto_test_case_name
+    - auto_execution_pattern_external_key
+    - auto_execution_pattern_name
+  - エラーレスポンスの追加
+    - auto_test_suite_external_keyが未設定
+    - auto_test_cycle_nameが未設定
+  - サンプルコード（CURL）修正
+    - 同じ"auto_test_case_external_key"、"auto_test_case_name"でデータパターンだけ異なるパターンを追加
+
 ## [v2024072301] - 2024/7/23
 
 ### Fixed
