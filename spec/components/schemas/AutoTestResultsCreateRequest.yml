@@ -14,26 +14,26 @@ properties:
       レポート表示時に、当該テスト実行回に付与する名前<br>
       定期実行の場合は、タイムスタンプなどの指定を推奨
   auto_execution_device_external_key:
-      type: string
-      description: 自動テスト実施環境のID
+    type: string
+    description: 自動テスト実施環境のID
   auto_execution_device_name:
-      type: string
-      description: |
-        自動テスト実施環境名<br>
-        `auto_execution_device_external_key`と`auto_execution_device_name`の設定によって、自動テスト安定性レポート-環境の表示名を制御します。
+    type: string
+    description: |
+      自動テスト実施環境名<br>
+      `auto_execution_device_external_key`と`auto_execution_device_name`の設定によって、自動テスト安定性レポート-環境の表示名を制御します。
 
-        |`auto_execution_device_external_key`|`auto_execution_device_name`|自動テスト安定性レポート-環境|
-        |:--:|:--:|:--|
-        |設定済み|設定済み|`auto_execution_device_name`の設定値|
-        |未設定|未設定|`標準環境`|
-        |設定済み|未設定|`auto_execution_device_external_key`の設定値|
-        |未設定|設定済み|`標準環境`|
+      |`auto_execution_device_external_key`|`auto_execution_device_name`|自動テスト安定性レポート-環境|
+      |:--:|:--:|:--|
+      |設定済み|設定済み|`auto_execution_device_name`の設定値|
+      |未設定|未設定|`標準環境`|
+      |設定済み|未設定|`auto_execution_device_external_key`の設定値|
+      |未設定|設定済み|`標準環境`|
 
   auto_test_results:
     type: array
     items:
       type: object
-      properties: 
+      properties:
         auto_test_case_external_key:
           type: string
           description: 自動テストツール・システム側にて、pass/failが決まる1件ごとのテストケース単位に付与しているIDや名前
@@ -61,25 +61,31 @@ properties:
 
         result:
           type: string
-          enum: 
+          enum:
             - pass
             - fail
             - error
             - skip
           description: |
             自動テスト結果
-            
+
             "error"は、テストの結果判定ができず、なんらかの理由でランタイムエラーを起こした際に利用
         execution_time_taken:
           type: integer
           description: テスト実行時間（単位はミリ秒）
         info_url:
           type: string
-          description: 当該テスト結果に関する詳細情報が記載されたWebページのURL
+          description: |
+            当該テスト結果に関する詳細情報が記載されたWebページのURL<br>
+            複数URLを設定する場合は、カンマ（,）で区切って記載
+
+            例）`https://sample1.com`と`https://sample2.com`の2つのURLを設定する場合<br>
+            `https://sample1.com,https://sample2.com`
         remark:
           type: string
+
           description: 備考
-      required: 
+      required:
         - auto_test_case_external_key
         - result
 required:
