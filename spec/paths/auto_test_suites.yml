@@ -11,15 +11,15 @@ post:
   requestBody:
     $ref: ../components/requestBodies/postAutoTestResultsRequest.yml
   responses:
-    '201':
+    "201":
       $ref: ../components/responses/NoResponse.yml
-    '400':
+    "400":
       $ref: ../components/responses/badRequest.yml
-    '422':
+    "422":
       $ref: ../components/responses/postFailAutoTestResultsResponse.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
@@ -39,19 +39,19 @@ post:
                 "auto_test_case_external_key": "auto_sample2",
                 "auto_test_case_name": "サンプル自動テストケース2",
                 "auto_execution_pattern_external_key": "dataScenario1",
-                "auto_execution_pattern_name": "データシナリオ1"
+                "auto_execution_pattern_name": "データシナリオ1",
                 "result": "fail",
                 "execution_time_taken": 100,
-                "info_url": "https://example.com"
+                "info_url": "https://example.com",
                 "remark": "sample_test2"
               },
                 "auto_test_case_external_key": "auto_sample2",
                 "auto_test_case_name": "サンプル自動テストケース2",
                 "auto_execution_pattern_external_key": "dataScenario2",
-                "auto_execution_pattern_name": "データシナリオ2"
+                "auto_execution_pattern_name": "データシナリオ2",
                 "result": "pass",
                 "execution_time_taken": 100,
-                "info_url": "https://example.com"
+                "info_url": "https://sample1.com,https://sample2.com",
                 "remark": "sample_test3"
               }
             ]
