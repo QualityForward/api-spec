@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2025020601] - 2025/2/6
+
+### Changed
+
+- 自動テスト結果入力
+  - auto_test_results[info_url]の説明文を修正
+    - 複数URLを設定する場合は、カンマ（,）で区切って記載
+  - Request samplesの修正
+    - 複数URL指定のサンプルを追加
+
 ## [v2024090401] - 2024/9/4
 
 ### Added
