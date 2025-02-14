@@ -2,7 +2,7 @@ type: object
 properties:
   test_suite:
     type: object
-    properties: 
+    properties:
       name:
         type: string
         description: テストスイート名
@@ -227,9 +227,6 @@ properties:
         type: string
         format: date-time
         description: テストスイート更新日時
-      additional_headers_json_string:
-        type: string
-        description: 追加ヘッダ設定の内容
       archived:
         type: boolean
         description: アーカイブ済みの有無
