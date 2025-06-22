@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: v2025021401
+  version: v2025062301
   title: QualityForward API
   description: >
     # API仕様
@@ -145,36 +145,36 @@ paths:
   /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}:
     $ref: >-
       paths/test_suites_{test_suite[id]}_test_suite_versions_{test_suite_version[id]}.yml
-  ? /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}/test_cases
-  : $ref: >-
+  /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}/test_cases:
+    $ref: >-
       paths/test_suites_{test_suite[id]}_test_suite_versions_{test_suite_version[id]}_test_cases.yml
-  ? /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}/test_cases/bulk_upsert
-  : $ref: >-
+  /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}/test_cases/bulk_upsert:
+    $ref: >-
       paths/test_suites_{test_suite[id]}_test_suite_versions_{test_suite_version[id]}_test_cases_bulk_upsert.yml
-  ? /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}/test_cases/{test_case[id]}
-  : $ref: >-
+  /test_suites/{test_suite[id]}/test_suite_versions/{test_suite_version[id]}/test_cases/{test_case[id]}:
+    $ref: >-
       paths/test_suites_{test_suite[id]}_test_suite_versions_{test_suite_version[id]}_test_cases_{test_case[id]}.yml
   /test_phases:
     $ref: paths/test_phases.yml
   /test_phases/{test_phase[id]}:
     $ref: paths/test_phases_{test_phase[id]}.yml
-  ? /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles
-  : $ref: >-
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles:
+    $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles.yml
-  ? /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}.csv
-  : $ref: >-
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}.csv:
+    $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}.csv.yml
-  ? /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}
-  : $ref: >-
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}:
+    $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}.yml
-  ? /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results
-  : $ref: >-
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results:
+    $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results.yml
-  ? /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/bulk_upsert
-  : $ref: >-
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/bulk_upsert:
+    $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results_bulk_upsert.yml
-  ? /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/{test_result[test_case_no]}
-  : $ref: >-
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/{test_result[test_case_no]}:
+    $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results_{test_result[test_case_no]}.yml
   /test_phases/{test_phase[id]}/bug_count_snapshots/bulk_create:
     $ref: paths/test_phases_{test_phase[id]}_bug_count_snapshots_bulk_create.yml
