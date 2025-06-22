@@ -2,7 +2,7 @@ type: object
 properties:
   test_phase:
     type: object
-    properties: 
+    properties:
       name:
         type: string
         description: テストフェーズの名前
@@ -14,9 +14,12 @@ properties:
         type: string
         format: date-time
         description: テストフェーズの終了日
-      redmine_issues_url:
+      redmine_new_issue_url:
         type: string
         description: Redmineの新規チケット作成画面のURL
+      redmine_issues_url:
+        type: string
+        description: バグ曲線、パイチャート取得用URL
       redmine_base_url:
         type: string
         description: RedmineのベースURL
@@ -37,12 +40,12 @@ properties:
         description: JIRAのJQL
       bug_tracking_system:
         type: integer
-        enum: 
+        enum:
           - 1
           - 2
         description: |
           バグトラッキングシステムの設定
-          
+
           |Enum Value|Description|
           |:--:|:--|
           |1|Redmine|
