@@ -17,8 +17,6 @@ properties:
         end_on:
           type: string
           format: date-time
-        redmine_issues_url:
-          type: string
         test_suite_assignments:
           type: array
           items:
