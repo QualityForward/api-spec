@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2025062301] - 2025/6/23
+
+### Fixed
+
+- GET テストフェーズ情報の取得
+  - レスポンスのパラメータ削除
+    - `redmine_issues_url`
+- POST テストフェーズの作成、PATCH テストフェーズの更新
+  - リクエストボディのパラメータ追加・修正
+    - `redmine_new_issue_url`を追加
+    - `redmine_issues_url`の説明文を修正
+
 ## [v2025021401] - 2025/2/14
 
 ### Fixed
