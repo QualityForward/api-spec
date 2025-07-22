@@ -1,0 +1,14 @@
+description: マルチテストサイクル環境作成失敗
+content:
+  application/json:
+    examples:
+      環境名がない場合:
+        value:
+          error_messages:
+            - index: 1
+              error: 環境名を入力してください
+      優先度がない場合:
+        value:
+          error_messages:
+            - index: 1
+              error: 対象の優先度を入力してください

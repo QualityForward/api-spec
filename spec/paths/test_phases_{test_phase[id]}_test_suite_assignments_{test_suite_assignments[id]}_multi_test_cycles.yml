@@ -1,0 +1,28 @@
+post:
+  operationId: PostMultiTestCycles
+  tags:
+    - MultiTestCycle
+  summary: マルチテストサイクルの作成
+  description: |
+    マルチテストサイクルを作成します。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_version_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postMultiTestCycleRequest.yml
+  responses:
+    "201":
+      $ref: ../components/responses/postMultiTestCycleResponse.yml
+    "404":
+      $ref: ../components/responses/NotFound.yml
+    "422":
+      $ref: ../components/responses/postFailMultiTestCycleResponse.yml
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key": "[生成したAPIキー]", "multi_test_cycle":{"name":"sample multi test cycle","target_priorities":["A"],"start_on":"2025-07-01","end_on":"2025-07-02","tester_id":2222}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象テストフェーズid]/test_suite_assignments/[対象テストアサインメントid]/multi_test_cycles"

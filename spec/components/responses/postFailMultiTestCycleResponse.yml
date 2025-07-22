@@ -1,0 +1,18 @@
+description: マルチテストサイクル作成失敗
+content:
+  application/json:
+    examples:
+      必須項目がない場合:
+        value:
+          "name":
+            - を入力してください
+          "target_priorities":
+            - を入力してください
+          "start_on":
+            - を入力してください
+          "end_on":
+            - を入力してください
+      テスト実施者のユーザーIDが不正な場合:
+        value:
+          "tester":
+            - に指定できない値がセットされています

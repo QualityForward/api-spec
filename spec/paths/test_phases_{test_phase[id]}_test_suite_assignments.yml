@@ -1,0 +1,29 @@
+post:
+  operationId: PostTestSuiteAssignments
+  tags:
+    - TestPhase
+    - TestSuiteVersion
+  summary: テストスイートバージョンの紐づけ
+  description: |
+    テストフェーズにテストスイートバージョンを紐づけます。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_version_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postTestSuiteAssignmentRequest.yml
+  responses:
+    "201":
+      $ref: ../components/responses/postTestSuiteAssignmentResponse.yml
+    "404":
+      $ref: ../components/responses/NotFound.yml
+    "422":
+      $ref: ../components/responses/postFailTestSuiteAssignmentResponse.yml
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key": "[生成したAPIキー]", "test_suite_assignment":{"test_suite_version_id":[紐づけるテストスイートバージョンid]}}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments"

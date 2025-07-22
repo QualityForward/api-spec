@@ -1,0 +1,34 @@
+type: object
+properties:
+  multi_test_cycle:
+    type: object
+    properties:
+      name:
+        type: string
+        description: |
+          マルチテストサイクル名
+      target_priorities:
+        type: array
+        items:
+          type: string
+          enum:
+            - A
+            - B
+            - C
+            - D
+            - E
+      start_on:
+        type: string
+        format: date-time
+      end_on:
+        type: string
+        format: date-time
+      tester_id:
+        type: integer
+        description: |
+          テスト実施者のユーザーID
+    required:
+      - name
+      - target_priorities
+      - start_on
+      - end_on

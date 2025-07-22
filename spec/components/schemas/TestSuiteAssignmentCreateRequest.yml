@@ -1,0 +1,11 @@
+type: object
+properties:
+  test_suite_assignment:
+    type: object
+    properties:
+      test_suite_version_id:
+        type: integer
+        description: |
+          テストスイートバージョンのID
+    required:
+      - test_suite_version_id

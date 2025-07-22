@@ -1,0 +1,13 @@
+name: multi_test_cycle[id]
+in: path
+description: >
+  マルチテストサイクルID
+
+
+  例）マルチテストサイクル設定のURLが以下の場合、multi_test_cycle[id]=4
+
+  `https://cloud.veriserve.co.jp/projects/1/test_phases/2/test_suite_assignments/3/multi_test_cycles/4/edit`
+
+required: true
+schema:
+  type: integer

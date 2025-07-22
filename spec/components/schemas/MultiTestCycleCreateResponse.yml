@@ -1,0 +1,38 @@
+type: object
+properties:
+  id:
+    type: integer
+  status:
+    type: string
+  name:
+    type: string
+  target_priorities:
+    type: array
+    items:
+      type: string
+      enum:
+        - A
+        - B
+        - C
+        - D
+        - E
+  target_results:
+    type: array
+  target_test_case_no_list:
+    type: array
+  test_suite_assignment_id:
+    type: integer
+  start_on:
+    type: string
+    format: date-time
+  end_on:
+    type: string
+    format: date-time
+  tester_id:
+    type: integer
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

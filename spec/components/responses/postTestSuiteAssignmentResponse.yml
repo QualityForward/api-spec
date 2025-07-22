@@ -1,0 +1,11 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/TestSuiteAssignmentCreateResponse.yml
+    example:
+      id: 4914
+      test_phase_id: 1111
+      test_suite_version_id: 99999
+      test_suite_name: Sample Test Suite
+      test_suite_version_name: "1.0"

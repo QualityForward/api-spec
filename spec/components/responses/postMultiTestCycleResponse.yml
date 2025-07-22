@@ -1,0 +1,19 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/MultiTestCycleCreateResponse.yml
+    example:
+      id: 1111
+      status: unexecuted
+      name: sample multi test cycle
+      target_priorities:
+        - A
+      target_results: []
+      target_test_case_no_list: []
+      test_suite_assignment_id: 9999
+      start_on: "2025-07-01"
+      end_on: "2025-07-02"
+      tester_id: 2222
+      created_at: "2025-07-01T10:00:00+09:00"
+      updated_at: "2025-07-01T10:00:00+09:00"

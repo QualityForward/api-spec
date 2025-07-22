@@ -1,0 +1,6 @@
+description: テストスイートバージョンの値が不正な場合
+content:
+  application/json:
+    example:
+      test_suite_version:
+        - に指定できない値がセットされています

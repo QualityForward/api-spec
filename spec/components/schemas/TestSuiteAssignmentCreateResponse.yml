@@ -1,0 +1,12 @@
+type: object
+properties:
+  id:
+    type: integer
+  test_phase_id:
+    type: integer
+  test_suite_version_id:
+    type: integer
+  test_suite_name:
+    type: string
+  test_suite_version_name:
+    type: string

@@ -124,6 +124,8 @@ tags:
     x-displayName: テストフェーズ
   - name: TestCycle
     x-displayName: テストサイクル
+  - name: MultiTestCycle
+    x-displayName: マルチテストサイクル
   - name: TestResult
     x-displayName: テスト結果
   - name: AutoTestResult
@@ -158,6 +160,9 @@ paths:
     $ref: paths/test_phases.yml
   /test_phases/{test_phase[id]}:
     $ref: paths/test_phases_{test_phase[id]}.yml
+  /test_phases/{test_phase[id]}/test_suite_assignments:
+    $ref: >-
+      paths/test_phases_{test_phase[id]}_test_suite_assignments.yml
   /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles.yml
@@ -167,6 +172,12 @@ paths:
   /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}.yml
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/multi_test_cycles:
+    $ref: >-
+      paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_multi_test_cycles.yml
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/multi_test_cycles/{multi_test_cycle[id]}/test_cycles/bulk_create:
+    $ref: >-
+      paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_multi_test_cycles_{multi_test_cycle[id]}_test_cycles_bulk_create.yml
   /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results.yml

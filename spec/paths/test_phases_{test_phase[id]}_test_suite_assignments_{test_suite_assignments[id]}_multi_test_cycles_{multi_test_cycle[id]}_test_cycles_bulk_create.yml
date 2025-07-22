@@ -1,0 +1,29 @@
+post:
+  operationId: PostMultiTestCycleEnvironments
+  tags:
+    - MultiTestCycle
+  summary: マルチテストサイクルの環境作成
+  description: |
+    マルチテストサイクルの環境を作成します。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_version_id.yml
+    - $ref: ../components/parameters/multi_test_cycle_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    $ref: ../components/requestBodies/postMultiTestCycleEnvironmentsRequest.yml
+  responses:
+    "201":
+      $ref: ../components/responses/postMultiTestCycleEnvironmentsResponse.yml
+    "404":
+      $ref: ../components/responses/NotFound.yml
+    "422":
+      $ref: ../components/responses/postFailMultiTestCycleEnvironmentsResponse.yml
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key": "[生成したAPIキー]", "test_cycles":[{"name":"sample environment","target_priorities":["A"]},{"name":"sample environment2","target_priorities":["A","B"]}]}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象テストフェーズid]/test_suite_assignments/[対象テストアサインメントid]/multi_test_cycles/[対象マルチテストサイクルid]/test_cycles/bulk_create"
