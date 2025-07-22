@@ -10,13 +10,13 @@ get:
     - $ref: ../components/parameters/test_suite_id.yml
     - $ref: ../components/parameters/api_key.yml
   responses:
-    '200':
+    "200":
       $ref: ../components/responses/getTestSuiteVersionResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --get \
           --data "api_key=[生成したAPIキー]" \
@@ -28,12 +28,7 @@ post:
     - TestSuiteVersion
   summary: テストスイートバージョンの作成
   description: >
-    テストスイートバージョンを作成します。
-
-
-    テストスイートバージョン名（test_suite_version["name"]）の値がない場合、エラーが返ります。
-
-
+    テストスイートバージョンを作成します。<br>
     テスト定義項目ラベル（test_suite_version["label_category1"]）、テスト結果ラベル（test_suite_version["label_content1"]）の上限はお申込内容に応じて異なります。
   parameters:
     - $ref: ../components/parameters/test_suite_id.yml
@@ -41,15 +36,15 @@ post:
   requestBody:
     $ref: ../components/requestBodies/postTestSuiteVersionRequest.yml
   responses:
-    '201':
+    "201":
       $ref: ../components/responses/postTestSuiteVersionResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
-    '422':
+    "422":
       $ref: ../components/responses/NoValue.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \

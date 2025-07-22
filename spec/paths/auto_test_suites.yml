@@ -4,8 +4,7 @@ post:
     - AutoTestResult
   summary: 自動テスト結果入力
   description: |
-    自動テストの安定性を分析するために、複数の自動テストケースの実行結果をまとめて入力します。<br>
-    必須項目の値が不正な場合や、auto_test_resultsが空の場合、また、auto_test_results内で一意であるべきauto_test_case_external_keyの重複がある際はエラーが返ります。
+    自動テストの安定性を分析するために、複数の自動テストケースの実行結果をまとめて入力します。
   parameters:
     - $ref: ../components/parameters/api_key.yml
   requestBody:

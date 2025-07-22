@@ -4,8 +4,7 @@ post:
     - TestCase
   summary: 複数テストケースの作成
   description: |
-    任意のテストスイート内にテストケースを複数作成します。
-
+    任意のテストスイート内にテストケースを複数作成します。<br>
     必須項目の値が不正な場合はエラーが返ります。<br>
     テスト定義項目（test_case["category"]）の数はお申込内容に応じて異なります(通常25、最大150まで)。
   parameters:
@@ -15,15 +14,15 @@ post:
   requestBody:
     $ref: ../components/requestBodies/postMultiTestCasesRequest.yml
   responses:
-    '201':
+    "201":
       $ref: ../components/responses/postMultiTestCasesResponse.yml
-    '422':
+    "422":
       $ref: ../components/responses/postFailMultiTestCasesCreated.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \

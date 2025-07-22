@@ -4,12 +4,8 @@ patch:
     - TestSuiteVersion
   summary: テストスイートバージョンの更新
   description: >
-    テストスイートの情報を更新します。
-
-
-    テストスイートバージョン名（test_suite_version["name"]）を更新する場合、値が入力されていないリクエストはエラーが返ります。
-
-
+    テストスイートの情報を更新します。<br>
+    テストスイートバージョン名（test_suite_version["name"]）を更新する場合、値が入力されていないリクエストはエラーが返ります。<br>
     テスト定義項目（test_suite_version["label_category1"]）、テスト結果ラベル（test_suite_version["label_content1"]）の上限はお申込内容に応じて異なります。
   parameters:
     - $ref: ../components/parameters/test_suite_id.yml
@@ -18,15 +14,15 @@ patch:
   requestBody:
     $ref: ../components/requestBodies/patchTestSuiteVersionRequest.yml
   responses:
-    '200':
+    "200":
       $ref: ../components/responses/patchTestSuiteVersionResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
-    '422':
+    "422":
       $ref: ../components/responses/NoValue.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request PATCH \
           --header "Content-Type: application/json" \
@@ -40,20 +36,19 @@ delete:
   summary: テストスイートバージョン削除
   description: |
     テストスイートバージョンを削除します。<br>
-    レスポンスボディは返りません。<br>
-    テストスイートバージョンが１つしか存在しない場合はエラーが返ります。
+    レスポンスボディは返りません。
   parameters:
     - $ref: ../components/parameters/test_suite_id.yml
     - $ref: ../components/parameters/test_suite_version_id.yml
     - $ref: ../components/parameters/api_key.yml
   responses:
-    '204':
+    "204":
       $ref: ../components/responses/NoResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request DELETE \
           "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートバージョン]/test_suite_versions/[対象のテストスイートバージョンid]?api_key=[生成したAPIキー]"

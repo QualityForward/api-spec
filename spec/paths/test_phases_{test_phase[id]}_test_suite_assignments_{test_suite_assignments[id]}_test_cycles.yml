@@ -11,13 +11,13 @@ get:
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/api_key.yml
   responses:
-    '200':
+    "200":
       $ref: ../components/responses/getTestCyclesResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --get \
           --data "api_key=[生成したAPIキー]" \
@@ -28,8 +28,7 @@ post:
     - TestCycle
   summary: テストサイクルの作成
   description: |
-    テストサイクルを作成します。<br>
-    必須項目の値が不正な場合はエラーが返ります。
+    テストサイクルを作成します。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
@@ -37,15 +36,15 @@ post:
   requestBody:
     $ref: ../components/requestBodies/postTestCycleRequest.yml
   responses:
-    '200':
+    "200":
       $ref: ../components/responses/postTestCycleResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
-    '422':
+    "422":
       $ref: ../components/responses/postFailTestCycleResponse.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \

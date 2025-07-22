@@ -4,8 +4,7 @@ patch:
     - TestResult
   summary: テスト結果の更新
   description: |
-    任意のテスト結果内容を更新します。<br>
-    必須項目の更新は値が入力されていない場合、エラーが返ります。
+    任意のテスト結果内容を更新します。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
@@ -15,15 +14,15 @@ patch:
   requestBody:
     $ref: ../components/requestBodies/patchTestResultRequest.yml
   responses:
-    '200':
+    "200":
       $ref: ../components/responses/patchTestResultResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
-    '422':
+    "422":
       $ref: ../components/responses/patchFailTestResultResponse.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request PATCH \
           --header "Content-Type: application/json" \
@@ -44,13 +43,13 @@ delete:
     - $ref: ../components/parameters/test_result_test_case_no.yml
     - $ref: ../components/parameters/api_key.yml
   responses:
-    '204':
+    "204":
       $ref: ../components/responses/NoResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request DELETE \
           --header "Content-Type: application/json" \

@@ -6,7 +6,6 @@ post:
   description: |
     任意のテストサイクルにテスト結果を入力します。<br>
     すでに結果がある項目に対しては上書きを行います。<br>
-    必須項目の値が不正な場合はエラーが返ります。<br>
     テスト結果自由項目（test_result["content"]）の数は契約内容に応じて異なります。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
@@ -16,15 +15,15 @@ post:
   requestBody:
     $ref: ../components/requestBodies/postMultiTestResultsRequest.yml
   responses:
-    '201':
+    "201":
       $ref: ../components/responses/postMultiTestResultsResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
-    '422':
+    "422":
       $ref: ../components/responses/postFailMultiTestResultsResponse.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \

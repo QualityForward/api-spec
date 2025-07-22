@@ -4,9 +4,7 @@ patch:
     - TestCase
   summary: テストケースの更新
   description: |
-    任意のテストスイート内のテストケースの情報を更新します。
-
-    必須項目の値が不正な場合はエラーが返ります。<br>
+    任意のテストスイート内のテストケースの情報を更新します。<br>
     テスト定義項目（test_case["category"]）の上限はお申込内容に応じて異なります(通常25、最大150まで)。
   parameters:
     - $ref: ../components/parameters/test_suite_id.yml
@@ -16,13 +14,13 @@ patch:
   requestBody:
     $ref: ../components/requestBodies/patchTestCaseRequest.yml
   responses:
-    '200':
+    "200":
       $ref: ../components/responses/patchTestCaseResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request PATCH \
           --header "Content-Type: application/json" \
@@ -42,13 +40,13 @@ delete:
     - $ref: ../components/parameters/test_case_id.yml
     - $ref: ../components/parameters/api_key.yml
   responses:
-    '204':
+    "204":
       $ref: ../components/responses/NoResponse.yml
-    '404':
+    "404":
       $ref: ../components/responses/NotFound.yml
   x-codeSamples:
-    - lang: 'cURL'
-      label: 'CLI'
+    - lang: "cURL"
+      label: "CLI"
       source: |
         curl --request DELETE \
           "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートid]/test_suite_versions/[対象のテストスイートバージョンid]/test_cases/[対象のテストケースid]?api_key=[生成したAPIキー]"
