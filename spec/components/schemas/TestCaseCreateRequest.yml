@@ -2,13 +2,13 @@ type: object
 properties:
   test_case:
     type: object
-    properties: 
+    properties:
       no:
         type: integer
         description: テストケース識別ID
       priority:
         type: integer
-        enum: 
+        enum:
           - 1
           - 2
           - 3
@@ -21,7 +21,6 @@ properties:
           - 10
         description: |
           テストケースの優先度 
-          
           例）A=1 ～ J=10
       category1:
         type: string
@@ -98,8 +97,5 @@ properties:
       category25:
         type: string
         description: テスト定義項目25の内容
-      test_model_item_uuid:
-        type: string
-        description: 要求ツリーのリーフID
     required:
       - no
