@@ -1,6 +1,13 @@
-description: 日付が誤っている時
+description: 失敗時
 content:
   application/json:
-    example:
-      target_date: 2023-05-111
-      error: 日付を入力してください
+    examples:
+      日付が誤っている場合:
+        value:
+          error_messages:
+            - target_date: 2023-05-111
+              error: 日付を入力してください
+      1000件より多く登録した場合:
+        value:
+          error_messages:
+            - error: 一度に登録できる件数は1000件までです

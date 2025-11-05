@@ -1,7 +1,13 @@
-description: 必須項目の値が不正な場合
+description: 失敗時
 content:
   application/json:
-    example:
-      error_messages:
-        - 'no': 21
-          error: テスト実施者が見つかりません
+    examples:
+      必須項目の値が不正な場合:
+        value:
+          error_messages:
+            - "no": 21
+              error: テスト実施者が見つかりません
+      1000件より多く登録した場合:
+        value:
+          error_messages:
+            - error: 一度に登録できる件数は1000件までです

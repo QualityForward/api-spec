@@ -1,7 +1,13 @@
-description: 値が不正な場合
+description: 失敗時
 content:
   application/json:
-    example:
-      error_messages:
-        - 'no': 21
-          error: 優先度に指定できない値がセットされています
+    examples:
+      値が不正な場合:
+        value:
+          error_messages:
+            - "no": 21
+              error: 優先度に指定できない値がセットされています
+      1000件より多く登録した場合:
+        value:
+          error_messages:
+            - error: 一度に登録できる件数は1000件までです
