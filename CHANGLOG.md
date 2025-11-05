@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2025110601] - 2025/11/06
+
+### Added
+
+- エラーレスポンスのパターン追加（登録件数上限オーバー）
+  - POST 複数テストケースの作成
+  - POST 複数テスト結果入力・上書き
+  - POST バグカウントの登録
+
+### Fixed
+
+- POST テストケースの作成
+  - 不要なプロパティ（`test_model_item_uuid`）の削除
+
 ## [v2025072301] - 2025/7/23
 
 ### Added
