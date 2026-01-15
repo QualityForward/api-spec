@@ -1,0 +1,93 @@
+post:
+  operationId: BulkCreateTestSuiteAssignments
+  tags:
+    - TestPhase
+    - TestSuiteVersion
+  summary: テストスイートバージョンの一括紐づけ
+  description: |
+    テストフェーズに複数のテストスイートバージョンを一括で紐づけます。<br>
+    いずれかのテストスイートバージョンでエラーが発生した場合、全ての紐づけがロールバックされます。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - test_suite_version_ids
+          properties:
+            test_suite_version_ids:
+              type: array
+              description: 紐づけるテストスイートバージョンIDの配列
+              items:
+                type: integer
+        example:
+          test_suite_version_ids: [1, 2, 3]
+  responses:
+    "201":
+      description: 成功時
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/TestSuiteAssignmentBulkCreateResponse.yml
+          example:
+            test_suite_assignments:
+              - id: 1
+                test_phase_id: 1
+                test_suite_version_id: 1
+              - id: 2
+                test_phase_id: 1
+                test_suite_version_id: 2
+    "404":
+      $ref: ../components/responses/NotFound.yml
+    "422":
+      description: バリデーションエラー時
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - type: object
+                properties:
+                  error:
+                    type: string
+                    description: エラーメッセージ（test_suite_version_idsが空の場合）
+              - type: object
+                properties:
+                  error_messages:
+                    type: array
+                    description: エラーメッセージの配列
+                    items:
+                      type: object
+                      properties:
+                        test_suite_version_id:
+                          type: string
+                          description: エラーが発生したテストスイートバージョンID
+                        errors:
+                          type: object
+                          description: エラー内容
+          examples:
+            empty_ids:
+              summary: test_suite_version_idsが空の場合
+              value:
+                error: "test_suite_version_idの指定は必須です"
+            validation_errors:
+              summary: バリデーションエラーの場合
+              value:
+                error_messages:
+                  - test_suite_version_id: "1"
+                    errors:
+                      test_suite_version: ["はすでに存在します"]
+                  - test_suite_version_id: "2"
+                    errors:
+                      test_suite_version: ["は利用可能なものを指定してください"]
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --request POST \
+          --header "Content-Type: application/json" \
+          --data '{"api_key": "[生成したAPIキー]", "test_suite_version_ids":[1, 2, 3]}' \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/bulk_create"

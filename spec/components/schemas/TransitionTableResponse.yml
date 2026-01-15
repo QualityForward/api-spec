@@ -1,0 +1,91 @@
+type: object
+properties:
+  test_cycles:
+    type: array
+    description: テストサイクルの配列
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: テストサイクルID
+        name:
+          type: string
+          description: テストサイクル名
+        start_on:
+          type: string
+          format: date
+          description: 開始日
+        end_on:
+          type: string
+          format: date
+          description: 終了日
+        transition_table:
+          type: object
+          description: 実績推移表データ
+          properties:
+            test_result_input_count:
+              type: object
+              description: 日付別テスト結果入力件数
+              additionalProperties:
+                type: integer
+            estimate_test_result_input_count:
+              type: object
+              description: 日付別予定テスト結果入力件数
+              additionalProperties:
+                type: integer
+            progress_rate:
+              type: object
+              description: 日付別進捗率
+              additionalProperties:
+                type: string
+            estimate_progress_rate:
+              type: object
+              description: 日付別予定進捗率
+              additionalProperties:
+                type: string
+            total_test_result_input_count:
+              type: object
+              description: 日付別累計テスト結果入力件数
+              additionalProperties:
+                type: integer
+            total_estimate_test_result_input_count:
+              type: object
+              description: 日付別累計予定テスト結果入力件数
+              additionalProperties:
+                type: integer
+            pass:
+              type: object
+              description: 日付別合格件数
+              additionalProperties:
+                type: integer
+            fail:
+              type: object
+              description: 日付別不合格件数
+              additionalProperties:
+                type: integer
+            skip:
+              type: object
+              description: 日付別スキップ件数
+              additionalProperties:
+                type: integer
+            cut:
+              type: object
+              description: 日付別カット件数
+              additionalProperties:
+                type: integer
+            block:
+              type: object
+              description: 日付別ブロック件数
+              additionalProperties:
+                type: integer
+            na:
+              type: object
+              description: 日付別N/A件数
+              additionalProperties:
+                type: integer
+            qa:
+              type: object
+              description: 日付別QA件数
+              additionalProperties:
+                type: integer

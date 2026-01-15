@@ -1,0 +1,17 @@
+type: object
+properties:
+  test_suite_assignments:
+    type: array
+    description: 作成されたテストスイートアサインメントの配列
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: テストスイートアサインメントID
+        test_phase_id:
+          type: integer
+          description: テストフェーズID
+        test_suite_version_id:
+          type: integer
+          description: テストスイートバージョンID
