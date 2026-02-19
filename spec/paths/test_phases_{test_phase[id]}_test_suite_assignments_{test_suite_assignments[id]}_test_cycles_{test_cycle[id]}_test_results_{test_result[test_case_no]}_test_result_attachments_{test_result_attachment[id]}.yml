@@ -1,0 +1,27 @@
+delete:
+  operationId: DeleteTestResultAttachment
+  tags:
+    - TestResult
+    - TestResultAttachment
+  summary: テスト結果添付ファイルの削除
+  description: |
+    テスト結果に紐づく添付ファイルを削除します。<br>
+    レスポンスボディは返りません。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/test_result_test_case_no.yml
+    - $ref: ../components/parameters/test_result_attachment_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    "204":
+      $ref: ../components/responses/NoResponse.yml
+    "404":
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --request DELETE \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[テストフェーズid]/test_suite_assignments/[テストスイートアサインメントid]/test_cycles/[テストサイクルid]/test_results/[テストケース番号]/test_result_attachments/[添付ファイルid]?api_key=[生成したAPIキー]"

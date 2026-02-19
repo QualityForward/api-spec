@@ -197,6 +197,9 @@ paths:
   /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/{test_result[test_case_no]}/test_result_attachments:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results_{test_result[test_case_no]}_test_result_attachments.yml
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/{test_result[test_case_no]}/test_result_attachments/{test_result_attachment[id]}:
+    $ref: >-
+      paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results_{test_result[test_case_no]}_test_result_attachments_{test_result_attachment[id]}.yml
   /test_phases/{test_phase[id]}/bug_count_snapshots/bulk_create:
     $ref: paths/test_phases_{test_phase[id]}_bug_count_snapshots_bulk_create.yml
   /auto_test_suites:
