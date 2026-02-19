@@ -1,0 +1,66 @@
+post:
+  operationId: PostTestResultAttachment
+  tags:
+    - TestResult
+    - TestResultAttachment
+  summary: テスト結果への添付ファイル追加
+  description: |
+    テスト結果に添付ファイルを追加します。<br>
+    対象のテストケースに紐づくテスト結果が存在しない場合は、自動的にテスト結果が作成されます。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/test_suite_assignments_id.yml
+    - $ref: ../components/parameters/test_cycle_id.yml
+    - $ref: ../components/parameters/test_result_test_case_no.yml
+    - $ref: ../components/parameters/api_key.yml
+  requestBody:
+    required: true
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          required:
+            - test_result_attachment[file]
+            - test_result_attachment[user_id]
+          properties:
+            test_result_attachment[file]:
+              type: string
+              format: binary
+              description: 添付ファイル（必須）
+            test_result_attachment[user_id]:
+              type: integer
+              description: 添付を行うユーザーのID
+  responses:
+    "201":
+      description: 成功時
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/TestResultAttachmentResponse.yml
+          example:
+            id: 1
+            file_name: "screenshot.png"
+            url: "https://example.com/attachments/1/screenshot.png"
+    "404":
+      $ref: ../components/responses/NotFound.yml
+    "422":
+      description: バリデーションエラー時
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: エラーメッセージ
+          example:
+            error: "ファイルの指定は必須です。"
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --request POST \
+          --form "api_key=[生成したAPIキー]" \
+          --form "test_result_attachment[file]=@/path/to/file.png" \
+          --form "test_result_attachment[user_id]=1" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[テストフェーズid]/test_suite_assignments/[テストスイートアサインメントid]/test_cycles/[テストサイクルid]/test_results/[テストケース番号]/test_result_attachments"

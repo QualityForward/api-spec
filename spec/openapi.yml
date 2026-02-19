@@ -128,6 +128,8 @@ tags:
     x-displayName: マルチテストサイクル
   - name: TestResult
     x-displayName: テスト結果
+  - name: TestResultAttachment
+    x-displayName: テスト結果添付ファイル
   - name: AutoTestResult
     x-displayName: 自動テスト結果
   - name: BugCount
@@ -160,9 +162,14 @@ paths:
     $ref: paths/test_phases.yml
   /test_phases/{test_phase[id]}:
     $ref: paths/test_phases_{test_phase[id]}.yml
+  /test_phases/{test_phase[id]}/transition_table:
+    $ref: paths/test_phases_{test_phase[id]}_transition_table.yml
   /test_phases/{test_phase[id]}/test_suite_assignments:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments.yml
+  /test_phases/{test_phase[id]}/test_suite_assignments/bulk_create:
+    $ref: >-
+      paths/test_phases_{test_phase[id]}_test_suite_assignments_bulk_create.yml
   /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles.yml
@@ -187,6 +194,9 @@ paths:
   /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/{test_result[test_case_no]}:
     $ref: >-
       paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results_{test_result[test_case_no]}.yml
+  /test_phases/{test_phase[id]}/test_suite_assignments/{test_suite_assignments[id]}/test_cycles/{test_cycle[id]}/test_results/{test_result[test_case_no]}/test_result_attachments:
+    $ref: >-
+      paths/test_phases_{test_phase[id]}_test_suite_assignments_{test_suite_assignments[id]}_test_cycles_{test_cycle[id]}_test_results_{test_result[test_case_no]}_test_result_attachments.yml
   /test_phases/{test_phase[id]}/bug_count_snapshots/bulk_create:
     $ref: paths/test_phases_{test_phase[id]}_bug_count_snapshots_bulk_create.yml
   /auto_test_suites:

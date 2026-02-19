@@ -1,0 +1,86 @@
+get:
+  operationId: GetTestPhaseTransitionTable
+  tags:
+    - TestPhase
+  summary: テストフェーズの実績推移表データ取得
+  description: |
+    テストフェーズ配下の全テストサイクルの実績推移表データを取得します。<br>
+    各テストサイクルごとに、日付別の実績データ（消化件数、進捗率、結果別件数など）が返されます。
+  parameters:
+    - $ref: ../components/parameters/test_phase_id.yml
+    - $ref: ../components/parameters/api_key.yml
+  responses:
+    "200":
+      description: 成功時
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/TransitionTableResponse.yml
+          example:
+            test_cycles:
+              - id: 434
+                name: "test_cycle_1"
+                start_on: "2025-11-19"
+                end_on: "2025-11-21"
+                transition_table:
+                  test_result_input_count:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  estimate_test_result_input_count:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  progress_rate:
+                    "20251118": "0.0%"
+                    "20251119": "0.0%"
+                    "20251120": "0.0%"
+                  estimate_progress_rate:
+                    "20251118": "0.0%"
+                    "20251119": "0.0%"
+                    "20251120": "0.0%"
+                  total_test_result_input_count:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  total_estimate_test_result_input_count:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  pass:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  fail:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  skip:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  cut:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  block:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  na:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+                  qa:
+                    "20251118": 0
+                    "20251119": 0
+                    "20251120": 0
+    "404":
+      $ref: ../components/responses/NotFound.yml
+  x-codeSamples:
+    - lang: "cURL"
+      label: "CLI"
+      source: |
+        curl --get \
+          --data "api_key=[生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/transition_table"
