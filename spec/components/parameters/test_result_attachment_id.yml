@@ -1,0 +1,6 @@
+name: test_result_attachment[id]
+in: path
+description: テスト結果添付ファイルのID
+required: true
+schema:
+  type: integer
