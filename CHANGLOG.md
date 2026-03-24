@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2026032401] - 2026/3/24
+
+### Added
+
+- API追加
+  - GET テストフェーズの実績推移表データ取得
+  - GET テスト結果添付ファイル一覧の取得
+  - DELETE テスト結果添付ファイルの削除
+  - POST テストスイートアサインメントの一括作成
+
 ## [v2025110601] - 2025/11/06
 
 ### Added
