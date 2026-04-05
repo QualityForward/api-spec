@@ -1,0 +1,14 @@
+type: object
+properties:
+  auto_test_suite:
+    type: object
+    properties:
+      id:
+        type: integer
+      external_key:
+        type: string
+      name:
+        type: string
+  chart_url:
+    type: string
+    format: uri

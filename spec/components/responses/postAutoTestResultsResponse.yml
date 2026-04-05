@@ -1,0 +1,11 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/AutoTestSuiteCreateResponse.yml
+    example:
+      auto_test_suite:
+        id: 123
+        external_key: sample_auto_test
+        name: サンプル自動テスト
+      chart_url: https://cloud.veriserve.co.jp/projects/1/auto_test_reports/auto_test_suites/123/auto_execution_devices/789
