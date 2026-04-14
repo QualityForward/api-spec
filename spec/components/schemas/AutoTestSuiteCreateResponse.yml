@@ -1,6 +1,12 @@
 type: object
 properties:
-  auto_test_suite:
+  id:
+    type: integer
+  external_key:
+    type: string
+  name:
+    type: string
+  auto_execution_device:
     type: object
     properties:
       id:
@@ -9,6 +15,6 @@ properties:
         type: string
       name:
         type: string
-  chart_url:
-    type: string
-    format: uri
+      chart_url:
+        type: string
+        format: uri
