@@ -9,7 +9,6 @@ post:
     いずれかのテストスイートバージョンでエラーが発生した場合、全ての紐づけがロールバックされます。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     required: true
     content:

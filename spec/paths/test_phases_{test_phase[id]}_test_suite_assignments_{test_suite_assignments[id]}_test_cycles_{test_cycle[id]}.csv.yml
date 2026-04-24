@@ -9,7 +9,6 @@ get:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/test_cycle_id.yml
-    - $ref: ../components/parameters/api_key.yml
   responses:
     '200':
       $ref: ../components/responses/getTestCycleCSVResponse.yml

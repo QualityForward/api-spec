@@ -9,7 +9,6 @@ get:
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
-    - $ref: ../components/parameters/api_key.yml
   responses:
     "200":
       $ref: ../components/responses/getTestCyclesResponse.yml
@@ -32,7 +31,6 @@ post:
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/postTestCycleRequest.yml
   responses:

@@ -10,7 +10,6 @@ patch:
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/test_cycle_id.yml
     - $ref: ../components/parameters/test_result_test_case_no.yml
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/patchTestResultRequest.yml
   responses:
@@ -41,7 +40,6 @@ delete:
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/test_cycle_id.yml
     - $ref: ../components/parameters/test_result_test_case_no.yml
-    - $ref: ../components/parameters/api_key.yml
   responses:
     "204":
       $ref: ../components/responses/NoResponse.yml

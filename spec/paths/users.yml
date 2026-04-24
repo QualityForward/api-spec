@@ -6,8 +6,6 @@ get:
   description: |
     ユーザの情報を取得します。<br>
     ユーザ数が特定以下の場合は"next_url"がnullのJSONを取得します。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   responses:
     '200':
       $ref: ../components/responses/getUsersResponse.yml

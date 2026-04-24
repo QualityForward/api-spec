@@ -1,0 +1,10 @@
+type: http
+scheme: bearer
+description: >
+  プロジェクトのAPIキーをBearerトークンとして`Authorization`ヘッダーに指定します。
+
+
+  例: `Authorization: Bearer <project_api_key>`
+
+
+  APIキーは各プロジェクトの設定画面から取得できます（APIキーの発行手順については本ドキュメント冒頭の「APIキーの発行手順」を参照してください）。

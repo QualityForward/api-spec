@@ -12,7 +12,6 @@ post:
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/test_cycle_id.yml
     - $ref: ../components/parameters/test_result_test_case_no.yml
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     required: true
     content:

@@ -4,8 +4,6 @@ get:
     - Project
   summary: プロジェクト情報の取得
   description: プロジェクトの情報を取得します。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   responses:
     '200':
       $ref: ../components/responses/getProjectResponse.yml

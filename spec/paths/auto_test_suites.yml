@@ -5,8 +5,6 @@ post:
   summary: 自動テスト結果入力
   description: |
     自動テストの安定性を分析するために、複数の自動テストケースの実行結果をまとめて入力します。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/postAutoTestResultsRequest.yml
   responses:

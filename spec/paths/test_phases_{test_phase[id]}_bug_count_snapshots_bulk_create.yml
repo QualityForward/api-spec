@@ -8,7 +8,6 @@ post:
     任意のテストスイート内にテストケースを作成します。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/postBugCountRequest.yml
   responses:

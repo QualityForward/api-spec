@@ -8,7 +8,6 @@ get:
     テストフェーズ全体と各テストサイクルごとに、日付別の実績データ（消化件数、進捗率、結果別件数など）が返されます。
   parameters:
     - $ref: ../components/parameters/test_phase_id.yml
-    - $ref: ../components/parameters/api_key.yml
   responses:
     "200":
       description: 成功時

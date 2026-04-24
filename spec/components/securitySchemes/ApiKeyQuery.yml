@@ -1,0 +1,8 @@
+type: apiKey
+in: query
+name: api_key
+description: >
+  後方互換用。プロジェクトのAPIキーをクエリパラメータ`api_key`で指定します。
+
+
+  新規クライアントでは`BearerAuth`（`Authorization: Bearer <project_api_key>`）の利用を推奨します。

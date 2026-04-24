@@ -6,8 +6,6 @@ get:
   description: |
     テストスイートの情報を取得します。<br>
     テストスイートが存在しない場合は”next_url”がnullのJSONを取得します。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   responses:
     "200":
       $ref: ../components/responses/getTestSuitesResponse.yml
@@ -28,8 +26,6 @@ post:
   description: >
     テストスイートを作成します。<br>
     テスト定義項目ラベル（test_suite["label_category"]）、テスト結果ラベル（test_suite["label_content1"]）の上限はお申込内容に応じて異なります。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/postTestSuiteRequest.yml
   responses:

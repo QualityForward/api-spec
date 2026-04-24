@@ -8,7 +8,6 @@ patch:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/test_cycle_id.yml
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/patchTestCycleRequest.yml
   responses:
@@ -37,7 +36,6 @@ delete:
     - $ref: ../components/parameters/test_phase_id.yml
     - $ref: ../components/parameters/test_suite_assignments_id.yml
     - $ref: ../components/parameters/test_cycle_id.yml
-    - $ref: ../components/parameters/api_key.yml
   responses:
     '204':
       $ref: ../components/responses/NoResponse.yml

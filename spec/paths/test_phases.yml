@@ -6,8 +6,6 @@ get:
   description: |
     テストフェーズの情報を取得します。<br>
     テストフェーズの数が一定以下の場合は”next_url”がnullのJSONを取得します。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   responses:
     "200":
       $ref: ../components/responses/getTestPhasesResponse.yml
@@ -27,8 +25,6 @@ post:
   summary: テストフェーズの作成
   description: |
     テストフェーズを作成します。
-  parameters:
-    - $ref: ../components/parameters/api_key.yml
   requestBody:
     $ref: ../components/requestBodies/postTestPhaseRequest.yml
   responses:
