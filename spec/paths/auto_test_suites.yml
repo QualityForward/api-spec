@@ -9,7 +9,7 @@ post:
     $ref: ../components/requestBodies/postAutoTestResultsRequest.yml
   responses:
     "201":
-      $ref: ../components/responses/NoResponse.yml
+      $ref: ../components/responses/postAutoTestResultsResponse.yml
     "400":
       $ref: ../components/responses/badRequest.yml
     "422":

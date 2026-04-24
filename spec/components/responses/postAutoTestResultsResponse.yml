@@ -1,0 +1,14 @@
+description: 成功時
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/AutoTestSuiteCreateResponse.yml
+    example:
+      id: 123
+      external_key: sample_auto_test
+      name: サンプル自動テスト
+      auto_execution_device:
+        id: 789
+        external_key: ios17_4
+        name: iOS 17.4
+        chart_url: https://cloud.veriserve.co.jp/projects/1/auto_test_reports/auto_test_suites/123/auto_execution_devices/789
