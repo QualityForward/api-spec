@@ -23,6 +23,8 @@ properties:
       end_on:
         type: string
         format: date-time
+      target_auto_test_statuses:
+        $ref: ./TargetAutoTestStatuses.yml
       tester_id:
         type: integer
         description: |

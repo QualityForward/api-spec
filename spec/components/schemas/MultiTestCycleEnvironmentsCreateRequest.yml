@@ -19,6 +19,8 @@ properties:
               - C
               - D
               - E
+        target_auto_test_statuses:
+          $ref: ./TargetAutoTestStatuses.yml
     required:
       - name
       - target_priorities

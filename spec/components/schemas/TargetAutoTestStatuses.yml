@@ -1,0 +1,21 @@
+type: array
+description: |
+  対象の自動化状況。テストスイートの自動化機能が有効な場合は必須。
+
+  |Value|Description|
+  |:--:|:--|
+  |under_review|レビュー中|
+  |under_redesign|再設計中|
+  |under_implemented|実装中|
+  |under_automated|自動化済み|
+  |skipped|スキップ|
+  |unnecessary|不要|
+items:
+  type: string
+  enum:
+    - under_review
+    - under_redesign
+    - under_implemented
+    - under_automated
+    - skipped
+    - unnecessary

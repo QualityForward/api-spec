@@ -196,6 +196,8 @@ properties:
       default_value_content50:
         type: string
         description: デフォルト値設定
+      target_auto_test_statuses:
+        $ref: ./TargetAutoTestStatuses.yml
       tester_id:
         type: integer
         description: テスト担当者
