@@ -25,7 +25,8 @@ patch:
       source: |
         curl --request PATCH \
           --header "Content-Type: application/json" \
-          --data '{"api_key":"[生成したAPIキー]","test_suite_version":{"name":"update_test_suite_version","note":"updated version name"}}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_suite_version":{"name":"update_test_suite_version","note":"updated version name"}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートid]/test_suite_versions/[対象のテストスイートバージョンid]"
 
 delete:
@@ -49,4 +50,5 @@ delete:
       label: "CLI"
       source: |
         curl --request DELETE \
-          "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートバージョン]/test_suite_versions/[対象のテストスイートバージョンid]?api_key=[生成したAPIキー]"
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_suites/[対象のテストスイートバージョン]/test_suite_versions/[対象のテストスイートバージョンid]"

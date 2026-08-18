@@ -23,4 +23,5 @@ delete:
       label: "CLI"
       source: |
         curl --request DELETE \
-          "https://cloud.veriserve.co.jp/api/v2/test_phases/[テストフェーズid]/test_suite_assignments/[テストスイートアサインメントid]/test_cycles/[テストサイクルid]/test_results/[テストケース番号]/test_result_attachments/[添付ファイルid]?api_key=[生成したAPIキー]"
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[テストフェーズid]/test_suite_assignments/[テストスイートアサインメントid]/test_cycles/[テストサイクルid]/test_results/[テストケース番号]/test_result_attachments/[添付ファイルid]"

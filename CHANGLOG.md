@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2026081801] - 2026/8/18
+
+### Changed
+
+- 認証方式を`Authorization: Bearer`ヘッダーのみに統一（破壊的変更）
+  - クエリパラメータ`api_key`によるAPIキーの指定を廃止
+  - リクエストボディの`api_key`によるAPIキーの指定を廃止
+  - `multipart/form-data`の`api_key`フィールドによるAPIキーの指定を廃止
+  - 各APIのcURLサンプルを`Authorization: Bearer`ヘッダー方式に変更
+- ページネーションの`next_url`にAPIキーを含めないよう変更（破壊的変更）
+  - `next_url`をリクエストする際は`Authorization`ヘッダーを別途指定する必要がある
+
+## [v2026042401] - 2026/4/24
+
+### Added
+
+- 認証方式として`Authorization: Bearer`ヘッダー（`BearerAuth`）を追加
+
 ## [v2026032401] - 2026/3/24
 
 ### Added

@@ -23,5 +23,6 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "multi_test_cycle":{"name":"sample multi test cycle","target_priorities":["A"],"start_on":"2025-07-01","end_on":"2025-07-02","tester_id":2222}}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"multi_test_cycle":{"name":"sample multi test cycle","target_priorities":["A"],"start_on":"2025-07-01","end_on":"2025-07-02","tester_id":2222}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象テストフェーズid]/test_suite_assignments/[対象テストアサインメントid]/multi_test_cycles"

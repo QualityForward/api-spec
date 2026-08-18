@@ -24,5 +24,6 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "test_suite_assignment":{"test_suite_version_id":[紐づけるテストスイートバージョンid]}}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_suite_assignment":{"test_suite_version_id":[紐づけるテストスイートバージョンid]}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments"

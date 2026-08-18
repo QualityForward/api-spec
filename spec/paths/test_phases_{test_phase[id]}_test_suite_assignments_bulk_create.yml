@@ -88,5 +88,6 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "test_suite_version_ids":[1, 2, 3]}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_suite_version_ids":[1, 2, 3]}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/bulk_create"

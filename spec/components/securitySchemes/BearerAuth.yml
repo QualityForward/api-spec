@@ -1,7 +1,7 @@
 type: http
 scheme: bearer
 description: >
-  プロジェクトのAPIキーをBearerトークンとして`Authorization`ヘッダーに指定します。
+  プロジェクトのAPIキーをBearerトークンとして`Authorization`ヘッダーに指定します。これがAPIの唯一の認証方式です。
 
 
   例: `Authorization: Bearer <project_api_key>`
