@@ -24,5 +24,6 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "test_cycles":[{"name":"sample environment","target_priorities":["A"]},{"name":"sample environment2","target_priorities":["A","B"]}]}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_cycles":[{"name":"sample environment","target_priorities":["A"]},{"name":"sample environment2","target_priorities":["A","B"]}]}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象テストフェーズid]/test_suite_assignments/[対象テストアサインメントid]/multi_test_cycles/[対象マルチテストサイクルid]/test_cycles/bulk_create"

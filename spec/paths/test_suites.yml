@@ -15,8 +15,7 @@ get:
     - lang: "cURL"
       label: "CLI"
       source: |
-        curl --get \
-          --data "api_key=[生成したAPIキー]" \
+        curl --header "Authorization: Bearer [生成したAPIキー]" \
           "https://cloud.veriserve.co.jp/api/v2/test_suites"
 post:
   operationId: PostTestSuite
@@ -39,5 +38,6 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key":"[生成したAPIキー]", "test_suite":{"name":"sample","label_category1": "label","use_category1": true}}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_suite":{"name":"sample","label_category1": "label","use_category1": true}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_suites"

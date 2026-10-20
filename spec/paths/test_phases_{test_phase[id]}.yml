@@ -21,7 +21,8 @@ patch:
       source: |
         curl --request PATCH \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "test_phase":{"name":"update-test-phase"}}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_phase":{"name":"update-test-phase"}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]"
 
 delete:
@@ -44,4 +45,5 @@ delete:
       label: "CLI"
       source: |
         curl --request DELETE \
-          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]?api_key=[生成したAPIキー]"
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]"

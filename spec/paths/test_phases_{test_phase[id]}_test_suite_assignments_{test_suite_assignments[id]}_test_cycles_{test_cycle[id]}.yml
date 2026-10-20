@@ -21,7 +21,8 @@ patch:
       source: |
         curl --request PATCH \
           --header "Content-Type: application/json" \
-          --data '{"api_key":"[生成したAPIキー]", "test_cycle":{"status":3, "name":"update_test_cycle", "target_priorities":["A"]}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_cycle":{"status":3, "name":"update_test_cycle", "target_priorities":["A"]}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]"
 
 delete:
@@ -46,4 +47,5 @@ delete:
       label: 'CLI'
       source: |
         curl --request DELETE \
-          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]?api_key=[生成したAPIキー]"
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid]"

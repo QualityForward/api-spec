@@ -59,7 +59,7 @@ post:
       label: "CLI"
       source: |
         curl --request POST \
-          --form "api_key=[生成したAPIキー]" \
+          --header "Authorization: Bearer [生成したAPIキー]" \
           --form "test_result_attachment[file]=@/path/to/file.png" \
           --form "test_result_attachment[user_id]=1" \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[テストフェーズid]/test_suite_assignments/[テストスイートアサインメントid]/test_cycles/[テストサイクルid]/test_results/[テストケース番号]/test_result_attachments"

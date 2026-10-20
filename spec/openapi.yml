@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: v2026042401
+  version: v2026081801
   title: QualityForward API
   description: >
     # API仕様
@@ -36,9 +36,9 @@ info:
 
     ## 認証
 
-    APIリクエストには発行済みのAPIキーによる認証が必要です。以下のいずれかの方式を利用できます。
+    APIリクエストには発行済みのAPIキーによる認証が必要です。認証方式はBearer認証のみです。
 
-    ### Bearer認証（推奨）
+    ### Bearer認証
 
     `Authorization`ヘッダーにBearerトークンとしてAPIキーを指定します。
 
@@ -46,13 +46,11 @@ info:
     Authorization: Bearer <project_api_key>
     ```
 
-    ### クエリパラメータ認証（後方互換）
+    ### 廃止された認証方式（破壊的変更）
 
-    クエリパラメータ`api_key`にAPIキーを指定します。新規クライアントでは`Bearer`認証の利用を推奨します。
+    クエリパラメータ`api_key`、リクエストボディの`api_key`、および`multipart/form-data`の`api_key`フィールドによるAPIキーの指定は、いずれも利用できなくなりました。これらの方式でリクエストした場合は認証エラーとなります。
 
-    ```
-    GET /api/v2/users?api_key=<project_api_key>
-    ```
+    URLのクエリ文字列に含まれたAPIキーはアクセスログやリファラ、ブラウザ履歴を経由して漏洩する恐れがあるため、廃止しました。上記の方式をご利用の場合は`Authorization`ヘッダーによるBearer認証へ移行してください。
 
     ## リクエスト制限
 
@@ -83,12 +81,12 @@ info:
     複数のデータを返す一部のAPIは、一度にすべてのデータを返却せず、ページネーションが適用されます。
 
     ```cmd
-    curl --get --data "api_key=[生成したAPIキー]" "https://cloud.veriserve.co.jp/api/v2/users"
+    curl --header "Authorization: Bearer [生成したAPIキー]" "https://cloud.veriserve.co.jp/api/v2/users"
 
     {
       "total_pages": 2,
       "current_page": 1,
-      "next_url": "http://www.example.com/api/v2/users?api_key=api_key_69&page=2",
+      "next_url": "http://www.example.com/api/v2/users?page=2",
       "users": [
         {
           "id": 87503,
@@ -117,7 +115,7 @@ info:
 
     |`current_page`|integer|現在のページ数|
 
-    |`next_url`|string|データの次ページを返すための値。エンドポイントに`next_url`を指定する。|
+    |`next_url`|string|データの次ページを返すための値。エンドポイントに`next_url`を指定する。`next_url`にAPIキーは含まれないため、リクエストする際は`Authorization`ヘッダーを別途指定する必要がある。|
 
   x-logo:
     url: >-
@@ -231,11 +229,8 @@ externalDocs:
 
 security:
   - BearerAuth: []
-  - ApiKeyQuery: []
 
 components:
   securitySchemes:
     BearerAuth:
       $ref: ./components/securitySchemes/BearerAuth.yml
-    ApiKeyQuery:
-      $ref: ./components/securitySchemes/ApiKeyQuery.yml

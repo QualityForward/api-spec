@@ -26,8 +26,8 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
+          --header "Authorization: Bearer [生成したAPIキー]" \
           --data '{
-            "api_key": "[生成したAPIキー]",
             "test_results": [
               {
                 "result":1,

@@ -18,8 +18,7 @@ get:
     - lang: "cURL"
       label: "CLI"
       source: |
-        curl --get \
-          --data "api_key=[生成したAPIキー]" \
+        curl --header "Authorization: Bearer [生成したAPIキー]" \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles"
 post:
   operationId: PostTestCycle
@@ -46,5 +45,6 @@ post:
       source: |
         curl --request POST \
           --header "Content-Type: application/json" \
-          --data '{"api_key": "[生成したAPIキー]", "test_cycle":{"status":1,"name":"Sample","target_priorities":["A", "B"],"start_on":"2024-07-01", "end_on":"2024-07-15"}}' \
+          --header "Authorization: Bearer [生成したAPIキー]" \
+          --data '{"test_cycle":{"status":1,"name":"Sample","target_priorities":["A", "B"],"start_on":"2024-07-01", "end_on":"2024-07-15"}}' \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles"

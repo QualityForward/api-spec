@@ -18,6 +18,5 @@ get:
     - lang: 'cURL'
       label: 'CLI'
       source: |
-        curl --get 
-          --data "api_key=[生成したAPIキー]" \
+        curl --header "Authorization: Bearer [生成したAPIキー]" \
           "https://cloud.veriserve.co.jp/api/v2/test_phases/[対象のテストフェーズid]/test_suite_assignments/[対象のテストフェーズに紐づけられたテストスイートバージョンid]/test_cycles/[対象のテストサイクルid].csv"
